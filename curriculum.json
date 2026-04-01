@@ -1,0 +1,132 @@
+{
+  "tracks": {
+    "ai": {
+      "days": ["monday", "thursday"],
+      "weeks": {
+        "1-4": [
+          "Linear regression from scratch",
+          "Logistic regression from scratch",
+          "Decision tree classifier",
+          "K-means clustering",
+          "KNN from scratch",
+          "Naive Bayes classifier",
+          "Simple neural network (forward pass)",
+          "Backpropagation from scratch"
+        ],
+        "5-8": [
+          "Prompt chaining with Claude API",
+          "Build a RAG pipeline",
+          "Embeddings and vector search",
+          "Tool-using LLM agent",
+          "Fine-tuning sentiment classifier",
+          "Multi-agent conversation system",
+          "Structured output extraction",
+          "Evaluation harness for LLM outputs"
+        ],
+        "9-12": [
+          "Image classifier with CNN",
+          "Object detection basics",
+          "Reinforcement learning - Q-learning",
+          "Policy gradient methods",
+          "Transformer attention from scratch",
+          "Image generation with diffusion",
+          "Speech-to-text pipeline",
+          "Multi-modal model integration"
+        ]
+      }
+    },
+    "crypto": {
+      "days": ["tuesday", "friday"],
+      "weeks": {
+        "1-4": [
+          "SHA-256 hash implementation",
+          "Merkle tree from scratch",
+          "Digital signatures (ECDSA basics)",
+          "Simple blockchain in Python",
+          "Proof of work simulation",
+          "Wallet address generation",
+          "Transaction structure and validation",
+          "Simple peer-to-peer network"
+        ],
+        "5-8": [
+          "Hello World Solidity contract",
+          "ERC-20 token implementation",
+          "ERC-721 NFT contract",
+          "Hardhat testing setup",
+          "DEX swap contract",
+          "Staking contract",
+          "Multisig wallet",
+          "Flash loan basics"
+        ],
+        "9-12": [
+          "On-chain data analysis with Python",
+          "MEV detection script",
+          "Uniswap V3 pool analytics",
+          "Lending protocol health monitor",
+          "Cross-chain bridge concept",
+          "Zero-knowledge proof intro (circom)",
+          "Governance contract",
+          "Token launch simulator"
+        ]
+      }
+    },
+    "robotics": {
+      "days": ["wednesday", "saturday"],
+      "weeks": {
+        "1-4": [
+          "PID controller simulation",
+          "State machine for robot behavior",
+          "Kinematics - forward and inverse",
+          "Motor control simulation",
+          "Sensor reading simulator",
+          "Obstacle avoidance algorithm",
+          "Line-following robot logic",
+          "Servo control patterns"
+        ],
+        "5-8": [
+          "A* pathfinding",
+          "RRT path planning",
+          "PyBullet robot simulation",
+          "Maze solver with BFS/DFS",
+          "Robot arm trajectory planning",
+          "Swarm behavior simulation",
+          "SLAM concept implementation",
+          "Kalman filter basics"
+        ],
+        "9-12": [
+          "Computer vision for robot navigation",
+          "Sensor fusion (IMU + GPS)",
+          "Autonomous drone path planning",
+          "Reinforcement learning for robot control",
+          "ROS2 basic node",
+          "Multi-robot coordination",
+          "Grasp planning algorithm",
+          "Digital twin simulation"
+        ]
+      }
+    },
+    "integration": {
+      "days": ["sunday"],
+      "weeks": {
+        "1-4": [
+          "AI-powered crypto price predictor",
+          "Robot that follows ML-detected objects",
+          "On-chain ML model registry",
+          "Autonomous trading bot skeleton"
+        ],
+        "5-8": [
+          "Smart contract that uses oracle ML predictions",
+          "Robot swarm with blockchain coordination",
+          "LLM agent that analyzes DeFi protocols",
+          "Autonomous robot with on-chain logging"
+        ],
+        "9-12": [
+          "Full autonomous trading agent",
+          "Decentralized robot task marketplace",
+          "ML model verification on-chain (ZK)",
+          "End-to-end: robot collects data, ML processes, blockchain stores"
+        ]
+      }
+    }
+  }
+}
