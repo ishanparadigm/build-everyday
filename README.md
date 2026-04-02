@@ -37,4 +37,4 @@ day-XXX-topic/
 
 ## Progress
 
-- Day 001: _coming soon_
+- Day 001: [Linear Regression from Scratch](day-001-linear-regression/) - Normal equation and gradient descent implementations with feature scaling analysis
