@@ -41,3 +41,4 @@ day-XXX-topic/
 - Day 002: [SHA-256 Hash Implementation](day-002-sha256-hash/) - Complete SHA-256 from bitwise operations with avalanche effect analysis
 - Day 003: [Logistic Regression from Scratch](day-003-logistic-regression/) - Binary classification with sigmoid, cross-entropy loss, and decision boundary analysis
 - Day 004: [Decision Tree Classifier](day-004-decision-tree/) - CART algorithm with entropy/Gini splitting, depth-based regularization, and feature importance
+- Day 005: [K-Means Clustering](day-005-kmeans-clustering/) - Unsupervised clustering with K-Means++ initialization, elbow analysis, and convergence visualization
