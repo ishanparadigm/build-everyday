@@ -20,6 +20,17 @@ Steps:
      - Type hints and clear function signatures
      - A if __name__ == '__main__' block with example usage that demonstrates the solution working, prints intermediate steps so the reader can follow the execution, and shows expected output
      - Where relevant: performance analysis, edge case handling, and comparison to alternative approaches in comments
+   - my_solution.py with:
+     - A skeleton template for the user to implement themselves
+     - All function/class signatures with type hints and docstrings copied from solution.py
+     - `raise NotImplementedError("TODO: implement this")` as the body for each function
+     - Hints as comments pointing to key concepts (but NOT the implementation)
+     - A if __name__ == '__main__' block that exercises the functions so the user can test as they build
+   - tests.py with:
+     - A comprehensive test suite using unittest that imports from my_solution (NOT solution)
+     - 5-10 tests covering core functionality, edge cases, and correctness
+     - A docstring at the top explaining how to run: `python3 -m pytest tests.py` or `python3 tests.py`
+     - Tests should verify the algorithm works correctly, not just that it runs
 8. Run the solution: execute `python3 solution.py` in the new folder and verify it exits with code 0. If it fails, fix the code and re-run until it passes.
 9. Update progress.json: add an entry for this day with day_number, track, challenge_name, folder_name, and date.
 10. Update the Progress section at the bottom of the root README.md — regenerate the dashboard table AND append the new day entry to the bullet list.

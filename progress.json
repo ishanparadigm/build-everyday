@@ -34,6 +34,20 @@
       "challenge": "K-means clustering",
       "folder": "day-005-kmeans-clustering",
       "date": "2026-04-06"
+    },
+    {
+      "day": 6,
+      "track": "robotics",
+      "challenge": "PID controller simulation",
+      "folder": "day-006-pid-controller",
+      "date": "2026-04-06"
+    },
+    {
+      "day": 7,
+      "track": "robotics",
+      "challenge": "State machine for robot behavior",
+      "folder": "day-007-state-machine",
+      "date": "2026-04-06"
     }
   ]
 }

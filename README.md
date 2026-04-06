@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-5-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-2_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--06-lightgrey)
+![Days](https://img.shields.io/badge/days-7-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-2_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--06-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -50,10 +50,10 @@ day-XXX-topic/
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███░░░░░░░░░░░░░░░░░ 4/24`  
 **Crypto     ** `█░░░░░░░░░░░░░░░░░░░ 1/24`  
-**Robotics   ** `░░░░░░░░░░░░░░░░░░░░ 0/24`  
+**Robotics   ** `██░░░░░░░░░░░░░░░░░░ 2/24`  
 **Integration** `░░░░░░░░░░░░░░░░░░░░ 0/12`  
 
-**Total LOC**: 2,096 lines across 5 solutions
+**Total LOC**: 3,154 lines across 7 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -71,3 +71,5 @@ day-XXX-topic/
 - Day 003: [Logistic Regression from Scratch](day-003-logistic-regression/) - Binary classification with sigmoid, cross-entropy loss, and decision boundary analysis
 - Day 004: [Decision Tree Classifier](day-004-decision-tree/) - CART algorithm with entropy/Gini splitting, depth-based regularization, and feature importance
 - Day 005: [K-Means Clustering](day-005-kmeans-clustering/) - Unsupervised clustering with K-Means++ initialization, elbow analysis, and convergence visualization
+- Day 006: [PID Controller Simulation](day-006-pid-controller/) - Proportional-integral-derivative control with thermal plant simulation, step response analysis, and tuning exploration
+- Day 007: [State Machine for Robot Behavior](day-007-state-machine/) - Generic FSM engine with guard conditions, entry/exit actions, and patrol robot behavior simulation
