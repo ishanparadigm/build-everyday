@@ -40,3 +40,4 @@ day-XXX-topic/
 - Day 001: [Linear Regression from Scratch](day-001-linear-regression/) - Normal equation and gradient descent implementations with feature scaling analysis
 - Day 002: [SHA-256 Hash Implementation](day-002-sha256-hash/) - Complete SHA-256 from bitwise operations with avalanche effect analysis
 - Day 003: [Logistic Regression from Scratch](day-003-logistic-regression/) - Binary classification with sigmoid, cross-entropy loss, and decision boundary analysis
+- Day 004: [Decision Tree Classifier](day-004-decision-tree/) - CART algorithm with entropy/Gini splitting, depth-based regularization, and feature importance
