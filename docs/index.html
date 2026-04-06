@@ -3,185 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>build-everyday dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>build-everyday</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --surface2: #1c2129;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-muted: #8b949e;
+    --bg: #000000;
+    --surface: #0A0A0A;
+    --border: #1a1a1a;
+    --text: #FFFFFF;
+    --text-muted: #999999;
+    --text-dim: #666666;
     --ai: #4A90D9;
     --crypto: #E8873D;
     --robotics: #50C878;
     --integration: #9B59B6;
-    --missed: #21262d;
-    --empty: #161b22;
-    --radius: 6px;
+    --missed: #0d0d0d;
+    --empty: #0A0A0A;
   }
 
   body {
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Inter', -apple-system, Helvetica Neue, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 4rem 2rem 2rem;
   }
 
+  /* Header */
   header {
-    text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   header h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.25rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    color: var(--text);
   }
 
   header p {
     color: var(--text-muted);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
 
   header a {
-    color: var(--ai);
+    color: var(--text-muted);
     text-decoration: none;
+    transition: opacity 0.2s;
   }
 
-  header a:hover { text-decoration: underline; }
+  header a:hover { opacity: 0.6; }
+
+  /* Section label */
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    margin-bottom: 1.25rem;
+  }
+
+  .section {
+    margin-bottom: 3.5rem;
+  }
 
   /* Streak cards */
   .streak-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-bottom: 3.5rem;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 0px;
   }
 
   .stat-card {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
-    text-align: center;
+    padding: 1.75rem 1.5rem;
   }
 
   .stat-card .value {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     font-weight: 700;
     font-family: 'JetBrains Mono', monospace;
-    line-height: 1.1;
+    line-height: 1;
+    letter-spacing: -0.03em;
   }
 
   .stat-card .label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    color: var(--text-dim);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-top: 0.25rem;
+    letter-spacing: 0.15em;
+    margin-top: 0.5rem;
+    font-weight: 500;
   }
 
-  /* Section */
-  .section {
-    margin-bottom: 2rem;
+  /* Stats row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-bottom: 3.5rem;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 0px;
   }
 
-  .section-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
+  .stats-row .stat-card .value {
+    font-size: 1.75rem;
   }
 
   /* Heatmap */
   .heatmap-wrap {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
+    border-radius: 0px;
+    padding: 2rem;
     overflow-x: auto;
   }
 
   .heatmap-legend {
     display: flex;
-    gap: 1rem;
-    margin-top: 0.75rem;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
     flex-wrap: wrap;
   }
 
   .heatmap-legend span {
     display: flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
   .legend-box {
-    width: 12px;
-    height: 12px;
-    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+  }
+
+  /* Two-column layout */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 
   /* Progress bars */
   .track-bars {
     display: grid;
-    gap: 0.75rem;
+    gap: 1.25rem;
   }
 
   .track-bar {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 0.75rem 1rem;
+    padding: 0;
   }
 
   .track-bar-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
   }
 
   .track-bar-name {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   .track-bar-count {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    color: var(--text-dim);
     font-family: 'JetBrains Mono', monospace;
   }
 
   .bar-bg {
     width: 100%;
-    height: 8px;
-    background: var(--bg);
-    border-radius: 4px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 0px;
     overflow: hidden;
   }
 
   .bar-fill {
     height: 100%;
-    border-radius: 4px;
+    border-radius: 0px;
     transition: width 0.6s ease;
   }
 
@@ -189,8 +218,8 @@
   .chart-wrap {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
+    border-radius: 0px;
+    padding: 1.5rem;
     overflow-x: auto;
   }
 
@@ -198,132 +227,159 @@
   .dep-graph-wrap {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem;
+    border-radius: 0px;
+    padding: 2rem;
     overflow-x: auto;
   }
 
   .dep-graph-wrap h3 {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
   }
 
-  /* Challenge list */
+  /* Challenge list / Filters */
   .filters {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    gap: 0;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
   }
 
   .filters input {
     flex: 1;
     min-width: 200px;
-    padding: 0.5rem 0.75rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    padding: 0.5rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
     color: var(--text);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-family: inherit;
     outline: none;
+    margin-right: 2rem;
+    transition: border-color 0.2s;
   }
 
-  .filters input:focus { border-color: var(--ai); }
+  .filters input::placeholder {
+    color: var(--text-dim);
+  }
+
+  .filters input:focus { border-color: var(--text-muted); }
 
   .filters button {
-    padding: 0.5rem 0.75rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    padding: 0.4rem 0;
+    margin: 0 1rem 0 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-dim);
+    font-size: 0.75rem;
     font-family: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: opacity 0.2s, border-color 0.2s;
   }
 
-  .filters button:hover, .filters button.active {
-    border-color: var(--text);
+  .filters button:hover {
+    opacity: 0.7;
+  }
+
+  .filters button.active {
     color: var(--text);
+    border-bottom-color: var(--text);
   }
-
-  .filters button.active { background: var(--surface2); }
 
   .challenge-list {
     display: grid;
-    gap: 0.5rem;
+    gap: 0;
   }
 
   .challenge-item {
     display: grid;
     grid-template-columns: 3.5rem 5rem 1fr auto;
     align-items: center;
-    gap: 0.75rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 0.625rem 1rem;
+    gap: 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.875rem 0;
     text-decoration: none;
     color: var(--text);
-    transition: border-color 0.15s;
-    font-size: 0.875rem;
+    transition: opacity 0.2s;
+    font-size: 0.85rem;
   }
 
-  .challenge-item:hover { border-color: var(--text-muted); }
+  .challenge-item:hover { opacity: 0.6; }
 
   .challenge-day {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-size: 0.75rem;
   }
 
   .challenge-track {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.15rem 0.5rem;
-    border-radius: 3px;
-    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0;
+    text-align: left;
   }
 
   .challenge-date {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    color: var(--text-dim);
     font-family: 'JetBrains Mono', monospace;
   }
 
   .challenge-stats {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    color: var(--text-dim);
     font-family: 'JetBrains Mono', monospace;
   }
 
-  /* Stats row */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.75rem;
-    margin-bottom: 2rem;
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .stats-row .stat-card .value {
-    font-size: 1.5rem;
+  footer span {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
-  /* Two-column layout for mid sections */
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  footer a {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
   }
+
+  footer a:hover { opacity: 0.6; }
 
   @media (max-width: 768px) {
+    .container { padding: 2rem 1rem; }
+    header h1 { font-size: 2.25rem; }
+    .streak-row { grid-template-columns: repeat(2, 1fr); }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
     .two-col { grid-template-columns: 1fr; }
     .challenge-item {
       grid-template-columns: 3rem 4rem 1fr;
@@ -337,7 +393,7 @@
 
   <header>
     <h1>build-everyday</h1>
-    <p>Daily coding challenges &mdash; <a href="https://github.com/ishanparadigm/build-everyday" target="_blank">github.com/ishanparadigm/build-everyday</a></p>
+    <p>Daily coding challenges across AI, crypto, and robotics &mdash; <a href="https://github.com/ishanparadigm/build-everyday" target="_blank">github.com/ishanparadigm/build-everyday</a></p>
   </header>
 
   <!-- Streak cards -->
@@ -356,7 +412,7 @@
         <span><span class="legend-box" style="background:#E8873D"></span>Crypto</span>
         <span><span class="legend-box" style="background:#50C878"></span>Robotics</span>
         <span><span class="legend-box" style="background:#9B59B6"></span>Integration</span>
-        <span><span class="legend-box" style="background:#21262d;border:1px solid #30363d"></span>No activity</span>
+        <span><span class="legend-box" style="background:#0d0d0d;border:1px solid #1a1a1a"></span>No activity</span>
       </div>
     </div>
   </div>
@@ -387,6 +443,11 @@
     <div class="filters" id="filters"></div>
     <div class="challenge-list" id="challengeList"></div>
   </div>
+
+  <footer>
+    <span>build-everyday</span>
+    <a href="https://github.com/ishanparadigm/build-everyday" target="_blank">View on GitHub</a>
+  </footer>
 
 </div>
 
@@ -568,20 +629,20 @@ function renderHeatmap(days) {
   const weekStart = new Date(startDate);
   weekStart.setDate(weekStart.getDate() - weekStart.getDay());
 
-  const cellSize = 14;
-  const cellGap = 3;
+  const cellSize = 10;
+  const cellGap = 2;
   const step = cellSize + cellGap;
   const weeks = 16;
   const leftPad = 28;
   const topPad = 20;
-  const dayLabels = ["","Mon","","Wed","","Fri",""];
+  const dayLabels = ["","M","","W","","F",""];
 
   let html = "";
 
   // Day labels
   for (let r = 0; r < 7; r++) {
     if (dayLabels[r]) {
-      html += `<text x="0" y="${topPad + r * step + cellSize - 2}" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">${dayLabels[r]}</text>`;
+      html += `<text x="0" y="${topPad + r * step + cellSize - 2}" fill="#666" font-size="9" font-family="Inter,sans-serif" letter-spacing="0.05em">${dayLabels[r]}</text>`;
     }
   }
 
@@ -593,7 +654,7 @@ function renderHeatmap(days) {
     d.setDate(d.getDate() + w * 7);
     if (d.getMonth() !== lastMonth) {
       lastMonth = d.getMonth();
-      html += `<text x="${leftPad + w * step}" y="12" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">${monthNames[d.getMonth()]}</text>`;
+      html += `<text x="${leftPad + w * step}" y="12" fill="#666" font-size="9" font-family="Inter,sans-serif" letter-spacing="0.05em">${monthNames[d.getMonth()]}</text>`;
     }
   }
 
@@ -613,8 +674,7 @@ function renderHeatmap(days) {
       if (future) {
         fill = "none";
       } else if (dateMap[ds]) {
-        fill = TRACK_COLORS[dateMap[ds][0]] || "#21262d";
-        // If multiple tracks on same day, gradient-ish: just use first
+        fill = TRACK_COLORS[dateMap[ds][0]] || "#0d0d0d";
       } else if (d >= weekStart && d <= today) {
         fill = "var(--missed)";
       }
@@ -623,7 +683,7 @@ function renderHeatmap(days) {
         const title = dateMap[ds]
           ? `${ds}: ${dateMap[ds].join(", ")}`
           : `${ds}: no activity`;
-        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
+        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="1" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
       }
     }
   }
@@ -674,15 +734,14 @@ function renderDiffChart(days) {
   const plotW = W - padL - padR;
   const plotH = H - padT - padB;
 
-  ctx.fillStyle = "var(--surface)";
   ctx.clearRect(0, 0, W, H);
 
   // Grid
   const tiers = ["Fundamentals", "Building", "Advanced"];
-  ctx.strokeStyle = "#30363d";
+  ctx.strokeStyle = "#1a1a1a";
   ctx.lineWidth = 1;
   ctx.font = "11px Inter, sans-serif";
-  ctx.fillStyle = "#8b949e";
+  ctx.fillStyle = "#666";
   ctx.textAlign = "right";
 
   for (let i = 0; i < 3; i++) {
@@ -696,7 +755,7 @@ function renderDiffChart(days) {
 
   // X axis labels
   ctx.textAlign = "center";
-  ctx.fillStyle = "#8b949e";
+  ctx.fillStyle = "#666";
   const maxDay = Math.max(days.length, 5);
   for (let i = 1; i <= maxDay; i++) {
     const x = padL + ((i - 1) / (maxDay - 1 || 1)) * plotW;
@@ -708,10 +767,10 @@ function renderDiffChart(days) {
     const tier = tierForChallenge(d.track, d.challenge);
     const x = padL + (idx / (maxDay - 1 || 1)) * plotW;
     const y = padT + plotH - ((tier - 1) / 2) * plotH;
-    const color = TRACK_COLORS[d.track] || "#8b949e";
+    const color = TRACK_COLORS[d.track] || "#666";
 
     ctx.beginPath();
-    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.arc(x, y, 4, 0, Math.PI * 2);
     ctx.fillStyle = color;
     ctx.fill();
 
@@ -725,8 +784,8 @@ function renderDiffChart(days) {
       ctx.beginPath();
       ctx.moveTo(px, py);
       ctx.lineTo(x, y);
-      ctx.strokeStyle = color + "88";
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = color + "44";
+      ctx.lineWidth = 1;
       ctx.stroke();
     }
   });
@@ -826,7 +885,7 @@ function renderDepGraph(days) {
     g.edges.forEach(([a, b]) => {
       const ax = pos[a].x + nodeW, ay = pos[a].y + nodeH / 2;
       const bx = pos[b].x, by = pos[b].y + nodeH / 2;
-      svgContent += `<path d="M${ax},${ay} C${ax + 30},${ay} ${bx - 30},${by} ${bx},${by}" stroke="${g.color}44" stroke-width="1.5" fill="none"/>`;
+      svgContent += `<path d="M${ax},${ay} C${ax + 30},${ay} ${bx - 30},${by} ${bx},${by}" stroke="${g.color}22" stroke-width="1" fill="none"/>`;
     });
 
     // Nodes
@@ -837,15 +896,15 @@ function renderDepGraph(days) {
           ? days.find(d => d.challenge.toLowerCase().includes(name.toLowerCase().split(" ")[0])).challenge.toLowerCase()
           : ""
       );
-      const opacity = isComplete ? "1" : "0.5";
-      const border = isComplete ? g.color : "#30363d";
+      const opacity = isComplete ? "1" : "0.4";
+      const border = isComplete ? g.color : "#1a1a1a";
       svgContent += `
-        <rect x="${x}" y="${y}" width="${nodeW}" height="${nodeH}" rx="4" fill="#161b22" stroke="${border}" stroke-width="${isComplete ? 1.5 : 1}" opacity="${opacity}"/>
-        <text x="${x + nodeW/2}" y="${y + nodeH/2 + 4}" text-anchor="middle" fill="${isComplete ? '#e6edf3' : '#8b949e'}" font-size="10" font-family="Inter,sans-serif">${name}</text>`;
+        <rect x="${x}" y="${y}" width="${nodeW}" height="${nodeH}" rx="1" fill="#0A0A0A" stroke="${border}" stroke-width="${isComplete ? 1.5 : 1}" opacity="${opacity}"/>
+        <text x="${x + nodeW/2}" y="${y + nodeH/2 + 4}" text-anchor="middle" fill="${isComplete ? '#fff' : '#666'}" font-size="10" font-family="Inter,sans-serif">${name}</text>`;
     });
 
     html += `<h3 style="color:${g.color}">${g.label}</h3>`;
-    html += `<svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" style="display:block;margin-bottom:1rem;">${svgContent}</svg>`;
+    html += `<svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" style="display:block;margin-bottom:1.5rem;">${svgContent}</svg>`;
   }
 
   container.innerHTML = html;
@@ -862,10 +921,10 @@ function renderChallengeList(days) {
   filtersEl.innerHTML = `
     <input type="text" placeholder="Search challenges..." id="searchInput">
     <button class="active" data-track="all">All</button>
-    <button data-track="ai" style="color:var(--ai)">AI</button>
-    <button data-track="crypto" style="color:var(--crypto)">Crypto</button>
-    <button data-track="robotics" style="color:var(--robotics)">Robotics</button>
-    <button data-track="integration" style="color:var(--integration)">Integration</button>
+    <button data-track="ai">AI</button>
+    <button data-track="crypto">Crypto</button>
+    <button data-track="robotics">Robotics</button>
+    <button data-track="integration">Integration</button>
   `;
 
   function update() {
@@ -881,14 +940,14 @@ function renderChallengeList(days) {
       return `
         <a class="challenge-item" href="${REPO_BASE}${d.folder}" target="_blank">
           <span class="challenge-day">Day ${String(d.day).padStart(3, "0")}</span>
-          <span class="challenge-track" style="background:${color}22;color:${color}">${d.track}</span>
+          <span class="challenge-track" style="color:${color}">${d.track}</span>
           <span>${d.challenge}</span>
           <span class="challenge-date">${d.date}${locStr ? " / " + locStr : ""}</span>
         </a>`;
     }).join("");
 
     if (!filtered.length) {
-      container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-muted);font-size:0.875rem;">No challenges found.</div>`;
+      container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-dim);font-size:0.85rem;">No challenges found.</div>`;
     }
   }
 
