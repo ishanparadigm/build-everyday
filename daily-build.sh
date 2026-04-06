@@ -183,6 +183,23 @@ else:
   fi
 done
 
+# --- Regenerate visuals (README badges, heatmap, progress bars) ---
+log "VISUALS: regenerating README and heatmap"
+python3 "$REPO_DIR/generate_readme.py" >> "$LOG_FILE" 2>&1 || log "WARN: generate_readme.py failed"
+
+# --- Weekly recap (only runs on Sundays) ---
+log "RECAP: checking if weekly recap is due"
+python3 "$REPO_DIR/generate_weekly_recap.py" >> "$LOG_FILE" 2>&1 || log "WARN: generate_weekly_recap.py failed"
+
+# --- Commit and push visual updates ---
+cd "$REPO_DIR"
+if ! git diff --quiet HEAD -- README.md docs/ recaps/ 2>/dev/null; then
+  git add README.md docs/ recaps/ 2>/dev/null
+  git commit -m "Update dashboard visuals and stats" >> "$LOG_FILE" 2>&1 || true
+  git push origin main >> "$LOG_FILE" 2>&1 || log "WARN: failed to push visual updates"
+  log "VISUALS: committed and pushed"
+fi
+
 # --- Final status ---
 if [ "$failures" -gt 0 ]; then
   notify_failure "$failures of $days_behind days failed"

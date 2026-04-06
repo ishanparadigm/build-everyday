@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="273" height="197" viewBox="0 0 273 197">
+<rect width="273" height="197" fill="#161B22" rx="6"/>
+<text x="2" y="40" fill="#8B949E" font-family="monospace" font-size="10">Mon</text>
+<text x="2" y="74" fill="#8B949E" font-family="monospace" font-size="10">Wed</text>
+<text x="2" y="108" fill="#8B949E" font-family="monospace" font-size="10">Fri</text>
+<text x="32" y="20" fill="#8B949E" font-family="monospace" font-size="10">Mar</text>
+<text x="49" y="20" fill="#8B949E" font-family="monospace" font-size="10">Apr</text>
+<text x="117" y="20" fill="#8B949E" font-family="monospace" font-size="10">May</text>
+<text x="185" y="20" fill="#8B949E" font-family="monospace" font-size="10">Jun</text>
+<rect x="32" y="62" width="14" height="14" rx="3" fill="#2D2D2D"/>
+<rect x="32" y="79" width="14" height="14" rx="3" fill="#4A90D9"/>
+<rect x="32" y="96" width="14" height="14" rx="3" fill="#E8873D"/>
+<rect x="32" y="113" width="14" height="14" rx="3" fill="#2D2D2D"/>
+<rect x="32" y="130" width="14" height="14" rx="3" fill="#2D2D2D"/>
+<rect x="49" y="28" width="14" height="14" rx="3" fill="#4A90D9"/>
+<text x="32" y="161" fill="#8B949E" font-family="monospace" font-size="10">Tracks:</text>
+<rect x="84" y="151" width="14" height="14" rx="3" fill="#4A90D9"/>
+<text x="102" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Ai</text>
+<rect x="128" y="151" width="14" height="14" rx="3" fill="#E8873D"/>
+<text x="146" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Crypto</text>
+<rect x="200" y="151" width="14" height="14" rx="3" fill="#50C878"/>
+<text x="218" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Robotics</text>
+<rect x="286" y="151" width="14" height="14" rx="3" fill="#9B59B6"/>
+<text x="304" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Integration</text>
+<rect x="393" y="151" width="14" height="14" rx="3" fill="#2D2D2D"/>
+<text x="411" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">No activity</text>
+</svg>

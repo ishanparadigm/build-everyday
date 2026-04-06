@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>build-everyday dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --ai: #4A90D9;
+    --crypto: #E8873D;
+    --robotics: #50C878;
+    --integration: #9B59B6;
+    --missed: #21262d;
+    --empty: #161b22;
+    --radius: 6px;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+  }
+
+  header p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+
+  header a {
+    color: var(--ai);
+    text-decoration: none;
+  }
+
+  header a:hover { text-decoration: underline; }
+
+  /* Streak cards */
+  .streak-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .stat-card .value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.1;
+  }
+
+  .stat-card .label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Heatmap */
+  .heatmap-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+  }
+
+  .heatmap-legend {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .heatmap-legend span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .legend-box {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+
+  /* Progress bars */
+  .track-bars {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .track-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+  }
+
+  .track-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .track-bar-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .track-bar-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .bar-bg {
+    width: 100%;
+    height: 8px;
+    background: var(--bg);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+  }
+
+  /* Difficulty chart */
+  .chart-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+  }
+
+  /* Dependency graph */
+  .dep-graph-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+  }
+
+  .dep-graph-wrap h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Challenge list */
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .filters input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-size: 0.875rem;
+    font-family: inherit;
+    outline: none;
+  }
+
+  .filters input:focus { border-color: var(--ai); }
+
+  .filters button {
+    padding: 0.5rem 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filters button:hover, .filters button.active {
+    border-color: var(--text);
+    color: var(--text);
+  }
+
+  .filters button.active { background: var(--surface2); }
+
+  .challenge-list {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .challenge-item {
+    display: grid;
+    grid-template-columns: 3.5rem 5rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.625rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s;
+    font-size: 0.875rem;
+  }
+
+  .challenge-item:hover { border-color: var(--text-muted); }
+
+  .challenge-day {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .challenge-track {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .challenge-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .challenge-stats {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .stats-row .stat-card .value {
+    font-size: 1.5rem;
+  }
+
+  /* Two-column layout for mid sections */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+    .challenge-item {
+      grid-template-columns: 3rem 4rem 1fr;
+    }
+    .challenge-date { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>build-everyday</h1>
+    <p>Daily coding challenges &mdash; <a href="https://github.com/ishanparadigm/build-everyday" target="_blank">github.com/ishanparadigm/build-everyday</a></p>
+  </header>
+
+  <!-- Streak cards -->
+  <div class="streak-row" id="streakRow"></div>
+
+  <!-- LOC / Stats overview -->
+  <div class="stats-row" id="statsRow"></div>
+
+  <!-- Heatmap -->
+  <div class="section">
+    <div class="section-title">Contribution Heatmap</div>
+    <div class="heatmap-wrap">
+      <svg id="heatmap"></svg>
+      <div class="heatmap-legend">
+        <span><span class="legend-box" style="background:#4A90D9"></span>AI</span>
+        <span><span class="legend-box" style="background:#E8873D"></span>Crypto</span>
+        <span><span class="legend-box" style="background:#50C878"></span>Robotics</span>
+        <span><span class="legend-box" style="background:#9B59B6"></span>Integration</span>
+        <span><span class="legend-box" style="background:#21262d;border:1px solid #30363d"></span>No activity</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Track progress + Difficulty chart -->
+  <div class="two-col">
+    <div class="section">
+      <div class="section-title">Track Progress</div>
+      <div class="track-bars" id="trackBars"></div>
+    </div>
+    <div class="section">
+      <div class="section-title">Difficulty Progression</div>
+      <div class="chart-wrap">
+        <canvas id="diffChart" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dependency graph -->
+  <div class="section">
+    <div class="section-title">Topic Dependency Graph</div>
+    <div class="dep-graph-wrap" id="depGraph"></div>
+  </div>
+
+  <!-- Challenge list -->
+  <div class="section">
+    <div class="section-title">Challenge Log</div>
+    <div class="filters" id="filters"></div>
+    <div class="challenge-list" id="challengeList"></div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// Inline data (works without server). Also attempts fetch.
+// ============================================================
+const INLINE_PROGRESS = {
+  "days": [
+    {"day":1,"track":"ai","challenge":"Linear regression from scratch","folder":"day-001-linear-regression","date":"2026-04-02","stats":{"loc":null}},
+    {"day":2,"track":"crypto","challenge":"SHA-256 hash implementation","folder":"day-002-sha256-hash","date":"2026-04-03","stats":{"loc":null}},
+    {"day":3,"track":"ai","challenge":"Logistic regression from scratch","folder":"day-003-logistic-regression","date":"2026-04-06","stats":{"loc":null}},
+    {"day":4,"track":"ai","challenge":"Decision tree classifier","folder":"day-004-decision-tree","date":"2026-04-06","stats":{"loc":null}},
+    {"day":5,"track":"ai","challenge":"K-means clustering","folder":"day-005-kmeans-clustering","date":"2026-04-06","stats":{"loc":null}}
+  ]
+};
+
+const INLINE_CURRICULUM = {
+  "tracks": {
+    "ai": {
+      "days":["monday","thursday"],
+      "weeks":{
+        "1-4":["Linear regression from scratch","Logistic regression from scratch","Decision tree classifier","K-means clustering","KNN from scratch","Naive Bayes classifier","Simple neural network (forward pass)","Backpropagation from scratch"],
+        "5-8":["Prompt chaining with Claude API","Build a RAG pipeline","Embeddings and vector search","Tool-using LLM agent","Fine-tuning sentiment classifier","Multi-agent conversation system","Structured output extraction","Evaluation harness for LLM outputs"],
+        "9-12":["Image classifier with CNN","Object detection basics","Reinforcement learning - Q-learning","Policy gradient methods","Transformer attention from scratch","Image generation with diffusion","Speech-to-text pipeline","Multi-modal model integration"]
+      }
+    },
+    "crypto": {
+      "days":["tuesday","friday"],
+      "weeks":{
+        "1-4":["SHA-256 hash implementation","Merkle tree from scratch","Digital signatures (ECDSA basics)","Simple blockchain in Python","Proof of work simulation","Wallet address generation","Transaction structure and validation","Simple peer-to-peer network"],
+        "5-8":["Hello World Solidity contract","ERC-20 token implementation","ERC-721 NFT contract","Hardhat testing setup","DEX swap contract","Staking contract","Multisig wallet","Flash loan basics"],
+        "9-12":["On-chain data analysis with Python","MEV detection script","Uniswap V3 pool analytics","Lending protocol health monitor","Cross-chain bridge concept","Zero-knowledge proof intro (circom)","Governance contract","Token launch simulator"]
+      }
+    },
+    "robotics": {
+      "days":["wednesday","saturday"],
+      "weeks":{
+        "1-4":["PID controller simulation","State machine for robot behavior","Kinematics - forward and inverse","Motor control simulation","Sensor reading simulator","Obstacle avoidance algorithm","Line-following robot logic","Servo control patterns"],
+        "5-8":["A* pathfinding","RRT path planning","PyBullet robot simulation","Maze solver with BFS/DFS","Robot arm trajectory planning","Swarm behavior simulation","SLAM concept implementation","Kalman filter basics"],
+        "9-12":["Computer vision for robot navigation","Sensor fusion (IMU + GPS)","Autonomous drone path planning","Reinforcement learning for robot control","ROS2 basic node","Multi-robot coordination","Grasp planning algorithm","Digital twin simulation"]
+      }
+    },
+    "integration": {
+      "days":["sunday"],
+      "weeks":{
+        "1-4":["AI-powered crypto price predictor","Robot that follows ML-detected objects","On-chain ML model registry","Autonomous trading bot skeleton"],
+        "5-8":["Smart contract that uses oracle ML predictions","Robot swarm with blockchain coordination","LLM agent that analyzes DeFi protocols","Autonomous robot with on-chain logging"],
+        "9-12":["Full autonomous trading agent","Decentralized robot task marketplace","ML model verification on-chain (ZK)","End-to-end: robot collects data, ML processes, blockchain stores"]
+      }
+    }
+  }
+};
+
+const REPO_BASE = "https://github.com/ishanparadigm/build-everyday/tree/main/";
+const TRACK_COLORS = { ai: "#4A90D9", crypto: "#E8873D", robotics: "#50C878", integration: "#9B59B6" };
+const TRACK_TOTALS = { ai: 24, crypto: 24, robotics: 24, integration: 12 };
+
+let progressData = INLINE_PROGRESS;
+let curriculumData = INLINE_CURRICULUM;
+
+// Try to fetch live data
+(async () => {
+  try {
+    const r = await fetch("../progress.json");
+    if (r.ok) progressData = await r.json();
+  } catch (_) {}
+  render();
+})();
+
+// ============================================================
+// Helpers
+// ============================================================
+function parseDate(s) { return new Date(s + "T00:00:00"); }
+
+function daysBetween(a, b) {
+  return Math.round((b - a) / 86400000);
+}
+
+function getWeekday(d) {
+  return ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"][d.getDay()];
+}
+
+function tierForChallenge(track, challenge) {
+  const t = curriculumData.tracks[track];
+  if (!t) return 0;
+  for (const [range, items] of Object.entries(t.weeks)) {
+    if (items.map(s => s.toLowerCase()).includes(challenge.toLowerCase())) {
+      const tier = range === "1-4" ? 1 : range === "5-8" ? 2 : 3;
+      return tier;
+    }
+  }
+  return 1;
+}
+
+function tierLabel(n) { return ["","Fundamentals","Building","Advanced"][n] || ""; }
+
+// ============================================================
+// Render
+// ============================================================
+function render() {
+  const days = progressData.days || [];
+  renderStreaks(days);
+  renderStats(days);
+  renderHeatmap(days);
+  renderTrackBars(days);
+  renderDiffChart(days);
+  renderDepGraph(days);
+  renderChallengeList(days);
+}
+
+// --- Streaks ---
+function renderStreaks(days) {
+  const dates = days.map(d => d.date).sort();
+  const uniqueDates = [...new Set(dates)].sort();
+
+  // Current streak: count backwards from today
+  const today = "2026-04-06";
+  let current = 0;
+  let check = new Date(today + "T00:00:00");
+  while (true) {
+    const ds = check.toISOString().slice(0, 10);
+    if (uniqueDates.includes(ds)) {
+      current++;
+      check.setDate(check.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+
+  // Longest streak
+  let longest = 0, run = 1;
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const diff = daysBetween(parseDate(uniqueDates[i-1]), parseDate(uniqueDates[i]));
+    if (diff === 1) { run++; } else { run = 1; }
+    longest = Math.max(longest, run);
+  }
+  if (uniqueDates.length === 1) longest = 1;
+  longest = Math.max(longest, current);
+
+  const totalDays = uniqueDates.length;
+  const totalChallenges = days.length;
+
+  document.getElementById("streakRow").innerHTML = `
+    <div class="stat-card"><div class="value" style="color:var(--ai)">${current}</div><div class="label">Current Streak</div></div>
+    <div class="stat-card"><div class="value">${longest}</div><div class="label">Longest Streak</div></div>
+    <div class="stat-card"><div class="value">${totalChallenges}</div><div class="label">Challenges Done</div></div>
+    <div class="stat-card"><div class="value">${totalDays}</div><div class="label">Active Days</div></div>
+  `;
+}
+
+// --- Stats (LOC placeholders) ---
+function renderStats(days) {
+  let totalLoc = 0, counted = 0;
+  days.forEach(d => {
+    if (d.stats && d.stats.loc) { totalLoc += d.stats.loc; counted++; }
+  });
+  const avgLoc = counted ? Math.round(totalLoc / counted) : "--";
+  document.getElementById("statsRow").innerHTML = `
+    <div class="stat-card"><div class="value">${totalLoc || "--"}</div><div class="label">Total LOC</div></div>
+    <div class="stat-card"><div class="value">${avgLoc}</div><div class="label">Avg LOC / Day</div></div>
+    <div class="stat-card"><div class="value">${Object.keys(TRACK_COLORS).filter(t => days.some(d => d.track === t)).length}/4</div><div class="label">Tracks Active</div></div>
+    <div class="stat-card"><div class="value">${days.length ? tierLabel(Math.max(...days.map(d => tierForChallenge(d.track, d.challenge)))) : "--"}</div><div class="label">Max Tier Reached</div></div>
+  `;
+}
+
+// --- Heatmap ---
+function renderHeatmap(days) {
+  const svg = document.getElementById("heatmap");
+  const dateMap = {};
+  days.forEach(d => {
+    if (!dateMap[d.date]) dateMap[d.date] = [];
+    dateMap[d.date].push(d.track);
+  });
+
+  // 12 weeks of calendar, starting from the beginning of the challenge
+  const startDate = days.length ? parseDate(days[0].date) : new Date();
+  // Go to start of that week (Sunday)
+  const weekStart = new Date(startDate);
+  weekStart.setDate(weekStart.getDate() - weekStart.getDay());
+
+  const cellSize = 14;
+  const cellGap = 3;
+  const step = cellSize + cellGap;
+  const weeks = 16;
+  const leftPad = 28;
+  const topPad = 20;
+  const dayLabels = ["","Mon","","Wed","","Fri",""];
+
+  let html = "";
+
+  // Day labels
+  for (let r = 0; r < 7; r++) {
+    if (dayLabels[r]) {
+      html += `<text x="0" y="${topPad + r * step + cellSize - 2}" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">${dayLabels[r]}</text>`;
+    }
+  }
+
+  // Month labels
+  const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let lastMonth = -1;
+  for (let w = 0; w < weeks; w++) {
+    const d = new Date(weekStart);
+    d.setDate(d.getDate() + w * 7);
+    if (d.getMonth() !== lastMonth) {
+      lastMonth = d.getMonth();
+      html += `<text x="${leftPad + w * step}" y="12" fill="#8b949e" font-size="10" font-family="Inter,sans-serif">${monthNames[d.getMonth()]}</text>`;
+    }
+  }
+
+  const today = new Date("2026-04-06T00:00:00");
+  for (let w = 0; w < weeks; w++) {
+    for (let r = 0; r < 7; r++) {
+      const d = new Date(weekStart);
+      d.setDate(d.getDate() + w * 7 + r);
+      const ds = d.toISOString().slice(0, 10);
+      const x = leftPad + w * step;
+      const y = topPad + r * step;
+
+      let fill = "var(--empty)";
+      let stroke = "none";
+      const future = d > today;
+
+      if (future) {
+        fill = "none";
+      } else if (dateMap[ds]) {
+        fill = TRACK_COLORS[dateMap[ds][0]] || "#21262d";
+        // If multiple tracks on same day, gradient-ish: just use first
+      } else if (d >= weekStart && d <= today) {
+        fill = "var(--missed)";
+      }
+
+      if (!future) {
+        const title = dateMap[ds]
+          ? `${ds}: ${dateMap[ds].join(", ")}`
+          : `${ds}: no activity`;
+        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
+      }
+    }
+  }
+
+  const svgW = leftPad + weeks * step + 10;
+  const svgH = topPad + 7 * step + 5;
+  svg.setAttribute("width", svgW);
+  svg.setAttribute("height", svgH);
+  svg.setAttribute("viewBox", `0 0 ${svgW} ${svgH}`);
+  svg.innerHTML = html;
+}
+
+// --- Track bars ---
+function renderTrackBars(days) {
+  const counts = {};
+  days.forEach(d => { counts[d.track] = (counts[d.track] || 0) + 1; });
+
+  const container = document.getElementById("trackBars");
+  let html = "";
+
+  for (const [track, total] of Object.entries(TRACK_TOTALS)) {
+    const done = counts[track] || 0;
+    const pct = Math.round((done / total) * 100);
+    const color = TRACK_COLORS[track];
+    html += `
+      <div class="track-bar">
+        <div class="track-bar-header">
+          <span class="track-bar-name" style="color:${color}">${track}</span>
+          <span class="track-bar-count">${done}/${total} (${pct}%)</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width:${pct}%;background:${color}"></div>
+        </div>
+      </div>`;
+  }
+  container.innerHTML = html;
+}
+
+// --- Difficulty chart (canvas) ---
+function renderDiffChart(days) {
+  const canvas = document.getElementById("diffChart");
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = Math.max(rect.width - 32, 300);
+  canvas.height = 200;
+  const ctx = canvas.getContext("2d");
+  const W = canvas.width, H = canvas.height;
+  const padL = 90, padR = 20, padT = 20, padB = 36;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  ctx.fillStyle = "var(--surface)";
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  const tiers = ["Fundamentals", "Building", "Advanced"];
+  ctx.strokeStyle = "#30363d";
+  ctx.lineWidth = 1;
+  ctx.font = "11px Inter, sans-serif";
+  ctx.fillStyle = "#8b949e";
+  ctx.textAlign = "right";
+
+  for (let i = 0; i < 3; i++) {
+    const y = padT + plotH - (i / 2) * plotH;
+    ctx.beginPath();
+    ctx.moveTo(padL, y);
+    ctx.lineTo(padL + plotW, y);
+    ctx.stroke();
+    ctx.fillText(tiers[i], padL - 8, y + 4);
+  }
+
+  // X axis labels
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#8b949e";
+  const maxDay = Math.max(days.length, 5);
+  for (let i = 1; i <= maxDay; i++) {
+    const x = padL + ((i - 1) / (maxDay - 1 || 1)) * plotW;
+    ctx.fillText("Day " + i, x, H - 10);
+  }
+
+  // Plot points
+  days.forEach((d, idx) => {
+    const tier = tierForChallenge(d.track, d.challenge);
+    const x = padL + (idx / (maxDay - 1 || 1)) * plotW;
+    const y = padT + plotH - ((tier - 1) / 2) * plotH;
+    const color = TRACK_COLORS[d.track] || "#8b949e";
+
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    // Connect to previous same-track point
+    const prev = days.slice(0, idx).reverse().find(p => p.track === d.track);
+    if (prev) {
+      const pi = days.indexOf(prev);
+      const pt = tierForChallenge(prev.track, prev.challenge);
+      const px = padL + (pi / (maxDay - 1 || 1)) * plotW;
+      const py = padT + plotH - ((pt - 1) / 2) * plotH;
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(x, y);
+      ctx.strokeStyle = color + "88";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  });
+}
+
+// --- Dependency graph ---
+function renderDepGraph(days) {
+  const container = document.getElementById("depGraph");
+  const completedChallenges = new Set(days.map(d => d.challenge.toLowerCase()));
+
+  const graphs = {
+    ai: {
+      label: "AI / ML",
+      color: TRACK_COLORS.ai,
+      nodes: [
+        "Linear Regression", "Logistic Regression", "Decision Tree", "K-Means",
+        "KNN", "Naive Bayes", "Neural Network", "Backpropagation",
+        "Prompt Chaining", "RAG Pipeline", "Embeddings", "LLM Agent",
+        "CNN", "Transformer", "Diffusion"
+      ],
+      edges: [
+        [0,1],[1,2],[1,3],[1,4],[1,5],[2,6],[3,6],[6,7],
+        [7,8],[8,9],[9,10],[10,11],
+        [7,12],[7,13],[13,14]
+      ]
+    },
+    crypto: {
+      label: "Crypto / Web3",
+      color: TRACK_COLORS.crypto,
+      nodes: [
+        "SHA-256", "Merkle Tree", "Digital Signatures", "Blockchain",
+        "Proof of Work", "Wallet", "Transactions", "P2P Network",
+        "Solidity", "ERC-20", "NFT", "DEX",
+        "On-chain Analytics", "ZK Proofs"
+      ],
+      edges: [
+        [0,1],[1,2],[2,3],[3,4],[3,5],[5,6],[6,7],
+        [3,8],[8,9],[9,10],[9,11],
+        [7,12],[11,13]
+      ]
+    }
+  };
+
+  let html = "";
+
+  for (const [track, g] of Object.entries(graphs)) {
+    const nodeW = 110, nodeH = 28, gapX = 140, gapY = 46;
+    // Layout nodes in tiers using BFS
+    const adj = Array.from({length: g.nodes.length}, () => []);
+    const inDeg = new Array(g.nodes.length).fill(0);
+    g.edges.forEach(([a,b]) => { adj[a].push(b); inDeg[b]++; });
+
+    const tiers = [];
+    const nodeLevel = new Array(g.nodes.length).fill(-1);
+    let queue = [];
+    for (let i = 0; i < g.nodes.length; i++) {
+      if (inDeg[i] === 0) { queue.push(i); nodeLevel[i] = 0; }
+    }
+    while (queue.length) {
+      const next = [];
+      tiers.push([...queue]);
+      for (const n of queue) {
+        for (const c of adj[n]) {
+          nodeLevel[c] = Math.max(nodeLevel[c], nodeLevel[n] + 1);
+          inDeg[c]--;
+          if (inDeg[c] === 0) next.push(c);
+        }
+      }
+      queue = next;
+    }
+
+    // Regroup by level
+    const levels = [];
+    g.nodes.forEach((_, i) => {
+      const l = nodeLevel[i];
+      if (!levels[l]) levels[l] = [];
+      levels[l].push(i);
+    });
+
+    const padX = 10, padY = 10;
+    const maxPerLevel = Math.max(...levels.map(l => l.length));
+    const svgW = levels.length * gapX + padX * 2;
+    const svgH = maxPerLevel * gapY + padY * 2 + 10;
+
+    const pos = {};
+    levels.forEach((nodes, li) => {
+      const totalH = nodes.length * gapY;
+      const startY = (svgH - totalH) / 2;
+      nodes.forEach((ni, ri) => {
+        pos[ni] = { x: padX + li * gapX, y: startY + ri * gapY };
+      });
+    });
+
+    let svgContent = "";
+
+    // Edges
+    g.edges.forEach(([a, b]) => {
+      const ax = pos[a].x + nodeW, ay = pos[a].y + nodeH / 2;
+      const bx = pos[b].x, by = pos[b].y + nodeH / 2;
+      svgContent += `<path d="M${ax},${ay} C${ax + 30},${ay} ${bx - 30},${by} ${bx},${by}" stroke="${g.color}44" stroke-width="1.5" fill="none"/>`;
+    });
+
+    // Nodes
+    g.nodes.forEach((name, i) => {
+      const {x, y} = pos[i];
+      const isComplete = completedChallenges.has(
+        days.find(d => d.challenge.toLowerCase().includes(name.toLowerCase().split(" ")[0]))
+          ? days.find(d => d.challenge.toLowerCase().includes(name.toLowerCase().split(" ")[0])).challenge.toLowerCase()
+          : ""
+      );
+      const opacity = isComplete ? "1" : "0.5";
+      const border = isComplete ? g.color : "#30363d";
+      svgContent += `
+        <rect x="${x}" y="${y}" width="${nodeW}" height="${nodeH}" rx="4" fill="#161b22" stroke="${border}" stroke-width="${isComplete ? 1.5 : 1}" opacity="${opacity}"/>
+        <text x="${x + nodeW/2}" y="${y + nodeH/2 + 4}" text-anchor="middle" fill="${isComplete ? '#e6edf3' : '#8b949e'}" font-size="10" font-family="Inter,sans-serif">${name}</text>`;
+    });
+
+    html += `<h3 style="color:${g.color}">${g.label}</h3>`;
+    html += `<svg width="${svgW}" height="${svgH}" viewBox="0 0 ${svgW} ${svgH}" style="display:block;margin-bottom:1rem;">${svgContent}</svg>`;
+  }
+
+  container.innerHTML = html;
+}
+
+// --- Challenge list ---
+function renderChallengeList(days) {
+  const container = document.getElementById("challengeList");
+  const filtersEl = document.getElementById("filters");
+
+  let searchTerm = "";
+  let activeTrack = "all";
+
+  filtersEl.innerHTML = `
+    <input type="text" placeholder="Search challenges..." id="searchInput">
+    <button class="active" data-track="all">All</button>
+    <button data-track="ai" style="color:var(--ai)">AI</button>
+    <button data-track="crypto" style="color:var(--crypto)">Crypto</button>
+    <button data-track="robotics" style="color:var(--robotics)">Robotics</button>
+    <button data-track="integration" style="color:var(--integration)">Integration</button>
+  `;
+
+  function update() {
+    const filtered = days.filter(d => {
+      const matchTrack = activeTrack === "all" || d.track === activeTrack;
+      const matchSearch = !searchTerm || d.challenge.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchTrack && matchSearch;
+    });
+
+    container.innerHTML = filtered.map(d => {
+      const color = TRACK_COLORS[d.track];
+      const locStr = d.stats && d.stats.loc ? `${d.stats.loc} LOC` : "";
+      return `
+        <a class="challenge-item" href="${REPO_BASE}${d.folder}" target="_blank">
+          <span class="challenge-day">Day ${String(d.day).padStart(3, "0")}</span>
+          <span class="challenge-track" style="background:${color}22;color:${color}">${d.track}</span>
+          <span>${d.challenge}</span>
+          <span class="challenge-date">${d.date}${locStr ? " / " + locStr : ""}</span>
+        </a>`;
+    }).join("");
+
+    if (!filtered.length) {
+      container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-muted);font-size:0.875rem;">No challenges found.</div>`;
+    }
+  }
+
+  document.getElementById("searchInput").addEventListener("input", e => {
+    searchTerm = e.target.value;
+    update();
+  });
+
+  filtersEl.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      filtersEl.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeTrack = btn.dataset.track;
+      update();
+    });
+  });
+
+  update();
+}
+
+// Resize handler for chart
+window.addEventListener("resize", () => {
+  const days = progressData.days || [];
+  renderDiffChart(days);
+});
+
+// Initial render with inline data
+render();
+</script>
+</body>
+</html>
