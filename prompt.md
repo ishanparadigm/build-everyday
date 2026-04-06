@@ -32,7 +32,7 @@ Steps:
      - A docstring at the top explaining how to run: `python3 -m pytest tests.py` or `python3 tests.py`
      - Tests should verify the algorithm works correctly, not just that it runs
 8. Run the solution: execute `python3 solution.py` in the new folder and verify it exits with code 0. If it fails, fix the code and re-run until it passes.
-9. Update progress.json: add an entry for this day with day_number, track, challenge_name, folder_name, and date.
+9. Update progress.json: add an entry for this day with day_number, track, challenge_name, folder_name, date, and set my_completed to false, my_time_seconds to null, my_completed_date to null, and revealed to false.
 10. Update the Progress section at the bottom of the root README.md — regenerate the dashboard table AND append the new day entry to the bullet list.
 11. Git add all new/changed files, commit with message 'Day XXX: [Topic]', and push to origin main.
 

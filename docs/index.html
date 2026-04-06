@@ -144,7 +144,7 @@
   /* Streak cards */
   .streak-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 3rem;
     margin-bottom: 4.5rem;
   }
@@ -360,7 +360,7 @@
 
   .challenge-item {
     display: grid;
-    grid-template-columns: 3.5rem 12px 1fr auto;
+    grid-template-columns: 3.5rem 12px 1fr auto auto;
     align-items: center;
     gap: 1.25rem;
     background: transparent;
@@ -402,6 +402,19 @@
     letter-spacing: 0.05em;
   }
 
+  .challenge-solved {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--paradigm-green);
+    white-space: nowrap;
+  }
+
+  .challenge-solved.unsolved {
+    color: var(--dark-gray);
+  }
+
   /* Footer */
   footer {
     margin-top: 5rem;
@@ -438,11 +451,11 @@
     .container { padding: 3rem 1rem; }
     .top-bar { padding: 0.75rem 1rem; font-size: 0.55rem; }
     header h1 { font-size: 2.5rem; }
-    .streak-row { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .streak-row { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .stats-row { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .two-col { grid-template-columns: 1fr; }
     .challenge-item {
-      grid-template-columns: 3rem 12px 1fr;
+      grid-template-columns: 3rem 12px 1fr auto;
     }
     .challenge-date { display: none; }
   }
@@ -481,6 +494,7 @@
         <span><span class="legend-box" style="background:#00E100"></span>Robotics</span>
         <span><span class="legend-box" style="background:#C100A3"></span>Integration</span>
         <span><span class="legend-box" style="background:#DDE8DD"></span>No activity</span>
+        <span><span class="legend-box" style="background:transparent;border:2px solid #090909;width:6px;height:6px"></span>Solved</span>
       </div>
     </div>
   </div>
@@ -525,11 +539,11 @@
 // ============================================================
 const INLINE_PROGRESS = {
   "days": [
-    {"day":1,"track":"ai","challenge":"Linear regression from scratch","folder":"day-001-linear-regression","date":"2026-04-02","stats":{"loc":null}},
-    {"day":2,"track":"crypto","challenge":"SHA-256 hash implementation","folder":"day-002-sha256-hash","date":"2026-04-03","stats":{"loc":null}},
-    {"day":3,"track":"ai","challenge":"Logistic regression from scratch","folder":"day-003-logistic-regression","date":"2026-04-06","stats":{"loc":null}},
-    {"day":4,"track":"ai","challenge":"Decision tree classifier","folder":"day-004-decision-tree","date":"2026-04-06","stats":{"loc":null}},
-    {"day":5,"track":"ai","challenge":"K-means clustering","folder":"day-005-kmeans-clustering","date":"2026-04-06","stats":{"loc":null}}
+    {"day":1,"track":"ai","challenge":"Linear regression from scratch","folder":"day-001-linear-regression","date":"2026-04-02","stats":{"loc":null},"my_completed":false,"my_time_seconds":null,"my_completed_date":null,"revealed":false},
+    {"day":2,"track":"crypto","challenge":"SHA-256 hash implementation","folder":"day-002-sha256-hash","date":"2026-04-03","stats":{"loc":null},"my_completed":false,"my_time_seconds":null,"my_completed_date":null,"revealed":false},
+    {"day":3,"track":"ai","challenge":"Logistic regression from scratch","folder":"day-003-logistic-regression","date":"2026-04-06","stats":{"loc":null},"my_completed":false,"my_time_seconds":null,"my_completed_date":null,"revealed":false},
+    {"day":4,"track":"ai","challenge":"Decision tree classifier","folder":"day-004-decision-tree","date":"2026-04-06","stats":{"loc":null},"my_completed":false,"my_time_seconds":null,"my_completed_date":null,"revealed":false},
+    {"day":5,"track":"ai","challenge":"K-means clustering","folder":"day-005-kmeans-clustering","date":"2026-04-06","stats":{"loc":null},"my_completed":false,"my_time_seconds":null,"my_completed_date":null,"revealed":false}
   ]
 };
 
@@ -658,11 +672,13 @@ function renderStreaks(days) {
 
   const totalDays = uniqueDates.length;
   const totalChallenges = days.length;
+  const solvedCount = days.filter(d => d.my_completed).length;
 
   document.getElementById("streakRow").innerHTML = `
     <div class="stat-card"><div class="value" style="color:var(--paradigm-green)">${current}</div><div class="label">Current Streak</div></div>
     <div class="stat-card"><div class="value">${longest}</div><div class="label">Longest Streak</div></div>
     <div class="stat-card"><div class="value">${totalChallenges}</div><div class="label">Challenges Done</div></div>
+    <div class="stat-card"><div class="value">${solvedCount}/${totalChallenges}</div><div class="label">Solved</div></div>
     <div class="stat-card"><div class="value">${totalDays}</div><div class="label">Active Days</div></div>
   `;
 }
@@ -686,9 +702,11 @@ function renderStats(days) {
 function renderHeatmap(days) {
   const svg = document.getElementById("heatmap");
   const dateMap = {};
+  const solvedMap = {};
   days.forEach(d => {
     if (!dateMap[d.date]) dateMap[d.date] = [];
     dateMap[d.date].push(d.track);
+    if (d.my_completed) solvedMap[d.date] = true;
   });
 
   // 12 weeks of calendar, starting from the beginning of the challenge
@@ -748,10 +766,18 @@ function renderHeatmap(days) {
       }
 
       if (!future) {
+        const isSolved = solvedMap[ds];
         const title = dateMap[ds]
-          ? `${ds}: ${dateMap[ds].join(", ")}`
+          ? `${ds}: ${dateMap[ds].join(", ")}${isSolved ? " (solved)" : ""}`
           : `${ds}: no activity`;
-        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="0" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
+        const borderStroke = isSolved ? "#090909" : stroke;
+        const borderWidth = isSolved ? "2" : "0";
+        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="0" fill="${fill}" stroke="${borderStroke}" stroke-width="${borderWidth}"><title>${title}</title></rect>`;
+        if (isSolved) {
+          const cx = x + cellSize / 2;
+          const cy = y + cellSize / 2;
+          html += `<circle cx="${cx}" cy="${cy}" r="2" fill="#090909"/>`;
+        }
       }
     }
   }
@@ -1004,12 +1030,20 @@ function renderChallengeList(days) {
     container.innerHTML = filtered.map(d => {
       const color = TRACK_COLORS[d.track];
       const locStr = d.stats && d.stats.loc ? `${d.stats.loc} LOC` : "";
+      const solvedCheck = d.my_completed ? "&#10003;" : "&#x2013;";
+      const solvedClass = d.my_completed ? "challenge-solved" : "challenge-solved unsolved";
+      const timeStr = d.my_completed && d.my_time_seconds
+        ? (d.my_time_seconds >= 3600
+          ? `${Math.floor(d.my_time_seconds / 3600)}h ${Math.floor((d.my_time_seconds % 3600) / 60)}m`
+          : `${Math.floor(d.my_time_seconds / 60)}m ${d.my_time_seconds % 60}s`)
+        : "";
       return `
         <a class="challenge-item" href="${REPO_BASE}${d.folder}" target="_blank">
           <span class="challenge-day">Day ${String(d.day).padStart(3, "0")}</span>
           <span class="challenge-node" style="background:${color}"></span>
           <span class="challenge-name">${d.challenge}</span>
           <span class="challenge-date">${d.date}${locStr ? " / " + locStr : ""}</span>
+          <span class="${solvedClass}">${solvedCheck}${timeStr ? " " + timeStr : ""}</span>
         </a>`;
     }).join("");
 
