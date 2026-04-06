@@ -1,0 +1,70 @@
+name: Daily Challenge Fallback
+
+on:
+  schedule:
+    # Run at 9pm UTC (2pm PT) — gives local cron (noon PT) a 2-hour head start
+    - cron: '0 21 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  check-and-generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if today's challenge exists
+        id: check
+        run: |
+          # Count existing day folders
+          DAY_COUNT=$(find . -maxdepth 1 -type d -name 'day-*' | wc -l | tr -d ' ')
+
+          # Calculate expected days since April 1, 2026
+          START_DATE="2026-04-01"
+          TODAY=$(date -u '+%Y-%m-%d')
+          START_EPOCH=$(date -d "$START_DATE" '+%s')
+          TODAY_EPOCH=$(date -d "$TODAY" '+%s')
+          EXPECTED=$(( (TODAY_EPOCH - START_EPOCH) / 86400 ))
+
+          echo "day_count=$DAY_COUNT" >> "$GITHUB_OUTPUT"
+          echo "expected=$EXPECTED" >> "$GITHUB_OUTPUT"
+
+          if [ "$DAY_COUNT" -ge "$EXPECTED" ]; then
+            echo "up_to_date=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Already up to date: $DAY_COUNT days exist, $EXPECTED expected"
+          else
+            echo "up_to_date=false" >> "$GITHUB_OUTPUT"
+            BEHIND=$((EXPECTED - DAY_COUNT))
+            echo "⚠️ Behind by $BEHIND days: $DAY_COUNT exist, $EXPECTED expected"
+          fi
+
+      - name: Install Claude CLI
+        if: steps.check.outputs.up_to_date == 'false'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Generate missing challenges
+        if: steps.check.outputs.up_to_date == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          DAY_COUNT=${{ steps.check.outputs.day_count }}
+          EXPECTED=${{ steps.check.outputs.expected }}
+          BEHIND=$((EXPECTED - DAY_COUNT))
+
+          # Cap at 3 per run to avoid timeout
+          [ "$BEHIND" -gt 3 ] && BEHIND=3
+
+          for i in $(seq 1 "$BEHIND"); do
+            echo "--- Generating day $((DAY_COUNT + i)) ---"
+            claude --print --dangerously-skip-permissions "$(cat prompt.md)"
+          done
+
+      - name: Push changes
+        if: steps.check.outputs.up_to_date == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git push origin main

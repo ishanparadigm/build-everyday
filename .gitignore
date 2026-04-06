@@ -1,0 +1,5 @@
+cron.log
+.daily-build.lock
+__pycache__/
+*.pyc
+.DS_Store

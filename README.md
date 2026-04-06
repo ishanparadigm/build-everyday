@@ -35,6 +35,12 @@ day-XXX-topic/
 
 **Week 13+** — Integration projects combining multiple tracks
 
+## Dashboard
+
+| Week | Mon (AI) | Tue (Crypto) | Wed (Robotics) | Thu (AI) | Fri (Crypto) | Sat (Robotics) | Sun (Integration) |
+|------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
+| 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
+
 ## Progress
 
 - Day 001: [Linear Regression from Scratch](day-001-linear-regression/) - Normal equation and gradient descent implementations with feature scaling analysis

@@ -1,0 +1,39 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "track": "ai",
+      "challenge": "Linear regression from scratch",
+      "folder": "day-001-linear-regression",
+      "date": "2026-04-02"
+    },
+    {
+      "day": 2,
+      "track": "crypto",
+      "challenge": "SHA-256 hash implementation",
+      "folder": "day-002-sha256-hash",
+      "date": "2026-04-03"
+    },
+    {
+      "day": 3,
+      "track": "ai",
+      "challenge": "Logistic regression from scratch",
+      "folder": "day-003-logistic-regression",
+      "date": "2026-04-06"
+    },
+    {
+      "day": 4,
+      "track": "ai",
+      "challenge": "Decision tree classifier",
+      "folder": "day-004-decision-tree",
+      "date": "2026-04-06"
+    },
+    {
+      "day": 5,
+      "track": "ai",
+      "challenge": "K-means clustering",
+      "folder": "day-005-kmeans-clustering",
+      "date": "2026-04-06"
+    }
+  ]
+}
