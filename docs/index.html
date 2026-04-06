@@ -4,145 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>build-everyday</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #000000;
-    --surface: #0A0A0A;
-    --border: #1a1a1a;
-    --text: #FFFFFF;
-    --text-muted: #999999;
-    --text-dim: #666666;
-    --ai: #4A90D9;
-    --crypto: #E8873D;
-    --robotics: #50C878;
-    --integration: #9B59B6;
-    --missed: #0d0d0d;
-    --empty: #0A0A0A;
+    --frontier: #F6FFF6;
+    --space-black: #090909;
+    --paradigm-green: #00E100;
+    --cobalt: #0F5AB2;
+    --saffron: #E6A11B;
+    --violet: #C100A3;
+    --gray: #DDE8DD;
+    --dark-gray: #D0D0D0;
+    --bg: var(--frontier);
+    --text: var(--space-black);
+    --text-muted: #666666;
+    --text-dim: var(--dark-gray);
+    --ai: var(--cobalt);
+    --crypto: var(--saffron);
+    --robotics: var(--paradigm-green);
+    --integration: var(--violet);
+    --missed: var(--gray);
+    --empty: var(--gray);
+    --border: var(--gray);
   }
 
   body {
-    font-family: 'Inter', -apple-system, Helvetica Neue, sans-serif;
+    font-family: 'DM Serif Display', Georgia, serif;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.33;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Paradigm 4-column top bar */
+  .top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+  }
+
+  .top-bar span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 1.2;
+    color: var(--dark-gray);
+  }
+
+  .top-bar span:first-child {
+    color: var(--space-black);
+  }
+
+  .top-bar span:nth-child(2) {
+    text-align: center;
+  }
+
+  .top-bar span:nth-child(3) {
+    text-align: center;
+  }
+
+  .top-bar span:last-child {
+    text-align: right;
+  }
+
   .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 4rem 2rem 2rem;
+    padding: 5rem 2rem 3rem;
   }
 
   /* Header */
   header {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 
   header h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    margin-bottom: 0.75rem;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    margin-bottom: 1rem;
     color: var(--text);
   }
 
   header p {
+    font-family: 'IBM Plex Mono', monospace;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 300;
-    letter-spacing: 0.01em;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1.2;
   }
 
   header a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
   }
 
-  header a:hover { opacity: 0.6; }
+  header a:hover { color: var(--paradigm-green); }
 
-  /* Section label */
+  /* Section label with node dot */
   .section-title {
-    font-size: 0.7rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--text-dim);
-    margin-bottom: 1.25rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .section-title::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--paradigm-green);
+    flex-shrink: 0;
   }
 
   .section {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
   }
 
   /* Streak cards */
   .streak-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    margin-bottom: 3.5rem;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 0px;
+    gap: 3rem;
+    margin-bottom: 4.5rem;
   }
 
   .stat-card {
-    background: var(--surface);
-    padding: 1.75rem 1.5rem;
+    padding: 0;
   }
 
   .stat-card .value {
-    font-size: 2.75rem;
-    font-weight: 700;
-    font-family: 'JetBrains Mono', monospace;
-    line-height: 1;
-    letter-spacing: -0.03em;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--space-black);
   }
 
   .stat-card .label {
-    font-size: 0.7rem;
-    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--dark-gray);
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   /* Stats row */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    margin-bottom: 3.5rem;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 0px;
+    gap: 3rem;
+    margin-bottom: 4.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
   }
 
   .stats-row .stat-card .value {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   /* Heatmap */
   .heatmap-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 0px;
-    padding: 2rem;
+    padding: 2rem 0;
     overflow-x: auto;
   }
 
   .heatmap-legend {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
     flex-wrap: wrap;
   }
 
@@ -150,9 +204,10 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     font-weight: 500;
   }
@@ -160,20 +215,19 @@
   .legend-box {
     width: 10px;
     height: 10px;
-    border-radius: 1px;
   }
 
   /* Two-column layout */
   .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
   }
 
   /* Progress bars */
   .track-bars {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .track-bar {
@@ -188,56 +242,53 @@
   }
 
   .track-bar-name {
-    font-size: 0.8rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.15em;
+    line-height: 1.2;
   }
 
   .track-bar-count {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.05em;
   }
 
   .bar-bg {
     width: 100%;
-    height: 4px;
-    background: var(--border);
-    border-radius: 0px;
+    height: 3px;
+    background: var(--gray);
     overflow: hidden;
   }
 
   .bar-fill {
     height: 100%;
-    border-radius: 0px;
     transition: width 0.6s ease;
   }
 
   /* Difficulty chart */
   .chart-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 0px;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     overflow-x: auto;
   }
 
   /* Dependency graph */
   .dep-graph-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 0px;
-    padding: 2rem;
+    padding: 2rem 0;
     overflow-x: auto;
   }
 
   .dep-graph-wrap h3 {
-    font-size: 0.7rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
   }
 
   /* Challenge list / Filters */
@@ -259,18 +310,22 @@
     border: none;
     border-bottom: 1px solid var(--border);
     color: var(--text);
-    font-size: 0.85rem;
-    font-family: inherit;
+    font-size: 0.8rem;
+    font-family: 'IBM Plex Mono', monospace;
     outline: none;
     margin-right: 2rem;
     transition: border-color 0.2s;
+    letter-spacing: 0.05em;
   }
 
   .filters input::placeholder {
-    color: var(--text-dim);
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.65rem;
   }
 
-  .filters input:focus { border-color: var(--text-muted); }
+  .filters input:focus { border-color: var(--space-black); }
 
   .filters button {
     padding: 0.4rem 0;
@@ -278,23 +333,24 @@
     background: none;
     border: none;
     border-bottom: 2px solid transparent;
-    color: var(--text-dim);
-    font-size: 0.75rem;
-    font-family: inherit;
+    color: var(--dark-gray);
+    font-size: 0.65rem;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     cursor: pointer;
-    transition: opacity 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s;
+    line-height: 1.2;
   }
 
   .filters button:hover {
-    opacity: 0.7;
+    color: var(--text-muted);
   }
 
   .filters button.active {
-    color: var(--text);
-    border-bottom-color: var(--text);
+    color: var(--space-black);
+    border-bottom-color: var(--paradigm-green);
   }
 
   .challenge-list {
@@ -304,52 +360,51 @@
 
   .challenge-item {
     display: grid;
-    grid-template-columns: 3.5rem 5rem 1fr auto;
+    grid-template-columns: 3.5rem 12px 1fr auto;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--border);
-    padding: 0.875rem 0;
+    padding: 1rem 0;
     text-decoration: none;
     color: var(--text);
-    transition: opacity 0.2s;
-    font-size: 0.85rem;
+    transition: color 0.2s;
+    font-size: 0.9rem;
   }
 
-  .challenge-item:hover { opacity: 0.6; }
+  .challenge-item:hover { color: var(--text-muted); }
 
   .challenge-day {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
-    color: var(--text-dim);
-    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
   }
 
-  .challenge-track {
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.2rem 0;
-    text-align: left;
+  .challenge-node {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+  }
+
+  .challenge-name {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.33;
   }
 
   .challenge-date {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
-  }
-
-  .challenge-stats {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--dark-gray);
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.05em;
   }
 
   /* Footer */
   footer {
-    margin-top: 4rem;
+    margin-top: 5rem;
     padding: 2rem 0;
     border-top: 1px solid var(--border);
     display: flex;
@@ -358,37 +413,50 @@
   }
 
   footer span {
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    letter-spacing: 0.1em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--dark-gray);
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     font-weight: 500;
   }
 
   footer a {
-    font-size: 0.7rem;
-    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
     text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: opacity 0.2s;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    font-weight: 500;
   }
 
-  footer a:hover { opacity: 0.6; }
+  footer a:hover { color: var(--paradigm-green); }
 
   @media (max-width: 768px) {
-    .container { padding: 2rem 1rem; }
-    header h1 { font-size: 2.25rem; }
-    .streak-row { grid-template-columns: repeat(2, 1fr); }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 3rem 1rem; }
+    .top-bar { padding: 0.75rem 1rem; font-size: 0.55rem; }
+    header h1 { font-size: 2.5rem; }
+    .streak-row { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .two-col { grid-template-columns: 1fr; }
     .challenge-item {
-      grid-template-columns: 3rem 4rem 1fr;
+      grid-template-columns: 3rem 12px 1fr;
     }
     .challenge-date { display: none; }
   }
 </style>
 </head>
 <body>
+
+<div class="top-bar">
+  <span>Build-Everyday</span>
+  <span>Dashboard</span>
+  <span>Progress Tracker</span>
+  <span>84-Day Challenge</span>
+</div>
+
 <div class="container">
 
   <header>
@@ -408,11 +476,11 @@
     <div class="heatmap-wrap">
       <svg id="heatmap"></svg>
       <div class="heatmap-legend">
-        <span><span class="legend-box" style="background:#4A90D9"></span>AI</span>
-        <span><span class="legend-box" style="background:#E8873D"></span>Crypto</span>
-        <span><span class="legend-box" style="background:#50C878"></span>Robotics</span>
-        <span><span class="legend-box" style="background:#9B59B6"></span>Integration</span>
-        <span><span class="legend-box" style="background:#0d0d0d;border:1px solid #1a1a1a"></span>No activity</span>
+        <span><span class="legend-box" style="background:#0F5AB2"></span>AI</span>
+        <span><span class="legend-box" style="background:#E6A11B"></span>Crypto</span>
+        <span><span class="legend-box" style="background:#00E100"></span>Robotics</span>
+        <span><span class="legend-box" style="background:#C100A3"></span>Integration</span>
+        <span><span class="legend-box" style="background:#DDE8DD"></span>No activity</span>
       </div>
     </div>
   </div>
@@ -445,7 +513,7 @@
   </div>
 
   <footer>
-    <span>build-everyday</span>
+    <span>Build-Everyday</span>
     <a href="https://github.com/ishanparadigm/build-everyday" target="_blank">View on GitHub</a>
   </footer>
 
@@ -503,7 +571,7 @@ const INLINE_CURRICULUM = {
 };
 
 const REPO_BASE = "https://github.com/ishanparadigm/build-everyday/tree/main/";
-const TRACK_COLORS = { ai: "#4A90D9", crypto: "#E8873D", robotics: "#50C878", integration: "#9B59B6" };
+const TRACK_COLORS = { ai: "#0F5AB2", crypto: "#E6A11B", robotics: "#00E100", integration: "#C100A3" };
 const TRACK_TOTALS = { ai: 24, crypto: 24, robotics: 24, integration: 12 };
 
 let progressData = INLINE_PROGRESS;
@@ -592,7 +660,7 @@ function renderStreaks(days) {
   const totalChallenges = days.length;
 
   document.getElementById("streakRow").innerHTML = `
-    <div class="stat-card"><div class="value" style="color:var(--ai)">${current}</div><div class="label">Current Streak</div></div>
+    <div class="stat-card"><div class="value" style="color:var(--paradigm-green)">${current}</div><div class="label">Current Streak</div></div>
     <div class="stat-card"><div class="value">${longest}</div><div class="label">Longest Streak</div></div>
     <div class="stat-card"><div class="value">${totalChallenges}</div><div class="label">Challenges Done</div></div>
     <div class="stat-card"><div class="value">${totalDays}</div><div class="label">Active Days</div></div>
@@ -629,7 +697,7 @@ function renderHeatmap(days) {
   const weekStart = new Date(startDate);
   weekStart.setDate(weekStart.getDate() - weekStart.getDay());
 
-  const cellSize = 10;
+  const cellSize = 11;
   const cellGap = 2;
   const step = cellSize + cellGap;
   const weeks = 16;
@@ -642,7 +710,7 @@ function renderHeatmap(days) {
   // Day labels
   for (let r = 0; r < 7; r++) {
     if (dayLabels[r]) {
-      html += `<text x="0" y="${topPad + r * step + cellSize - 2}" fill="#666" font-size="9" font-family="Inter,sans-serif" letter-spacing="0.05em">${dayLabels[r]}</text>`;
+      html += `<text x="0" y="${topPad + r * step + cellSize - 2}" fill="#666" font-size="9" font-family="IBM Plex Mono,monospace" letter-spacing="0.15em" text-transform="uppercase">${dayLabels[r]}</text>`;
     }
   }
 
@@ -654,7 +722,7 @@ function renderHeatmap(days) {
     d.setDate(d.getDate() + w * 7);
     if (d.getMonth() !== lastMonth) {
       lastMonth = d.getMonth();
-      html += `<text x="${leftPad + w * step}" y="12" fill="#666" font-size="9" font-family="Inter,sans-serif" letter-spacing="0.05em">${monthNames[d.getMonth()]}</text>`;
+      html += `<text x="${leftPad + w * step}" y="12" fill="#666" font-size="9" font-family="IBM Plex Mono,monospace" letter-spacing="0.1em">${monthNames[d.getMonth()]}</text>`;
     }
   }
 
@@ -667,23 +735,23 @@ function renderHeatmap(days) {
       const x = leftPad + w * step;
       const y = topPad + r * step;
 
-      let fill = "var(--empty)";
+      let fill = "#DDE8DD";
       let stroke = "none";
       const future = d > today;
 
       if (future) {
         fill = "none";
       } else if (dateMap[ds]) {
-        fill = TRACK_COLORS[dateMap[ds][0]] || "#0d0d0d";
+        fill = TRACK_COLORS[dateMap[ds][0]] || "#DDE8DD";
       } else if (d >= weekStart && d <= today) {
-        fill = "var(--missed)";
+        fill = "#DDE8DD";
       }
 
       if (!future) {
         const title = dateMap[ds]
           ? `${ds}: ${dateMap[ds].join(", ")}`
           : `${ds}: no activity`;
-        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="1" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
+        html += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="0" fill="${fill}" stroke="${stroke}"><title>${title}</title></rect>`;
       }
     }
   }
@@ -738,9 +806,9 @@ function renderDiffChart(days) {
 
   // Grid
   const tiers = ["Fundamentals", "Building", "Advanced"];
-  ctx.strokeStyle = "#1a1a1a";
+  ctx.strokeStyle = "#DDE8DD";
   ctx.lineWidth = 1;
-  ctx.font = "11px Inter, sans-serif";
+  ctx.font = "11px 'IBM Plex Mono', monospace";
   ctx.fillStyle = "#666";
   ctx.textAlign = "right";
 
@@ -762,17 +830,15 @@ function renderDiffChart(days) {
     ctx.fillText("Day " + i, x, H - 10);
   }
 
-  // Plot points
+  // Plot points — squares instead of circles for Paradigm style
   days.forEach((d, idx) => {
     const tier = tierForChallenge(d.track, d.challenge);
     const x = padL + (idx / (maxDay - 1 || 1)) * plotW;
     const y = padT + plotH - ((tier - 1) / 2) * plotH;
     const color = TRACK_COLORS[d.track] || "#666";
 
-    ctx.beginPath();
-    ctx.arc(x, y, 4, 0, Math.PI * 2);
     ctx.fillStyle = color;
-    ctx.fill();
+    ctx.fillRect(x - 4, y - 4, 8, 8);
 
     // Connect to previous same-track point
     const prev = days.slice(0, idx).reverse().find(p => p.track === d.track);
@@ -885,7 +951,7 @@ function renderDepGraph(days) {
     g.edges.forEach(([a, b]) => {
       const ax = pos[a].x + nodeW, ay = pos[a].y + nodeH / 2;
       const bx = pos[b].x, by = pos[b].y + nodeH / 2;
-      svgContent += `<path d="M${ax},${ay} C${ax + 30},${ay} ${bx - 30},${by} ${bx},${by}" stroke="${g.color}22" stroke-width="1" fill="none"/>`;
+      svgContent += `<path d="M${ax},${ay} C${ax + 30},${ay} ${bx - 30},${by} ${bx},${by}" stroke="#DDE8DD" stroke-width="1" fill="none"/>`;
     });
 
     // Nodes
@@ -896,11 +962,12 @@ function renderDepGraph(days) {
           ? days.find(d => d.challenge.toLowerCase().includes(name.toLowerCase().split(" ")[0])).challenge.toLowerCase()
           : ""
       );
-      const opacity = isComplete ? "1" : "0.4";
-      const border = isComplete ? g.color : "#1a1a1a";
+      const fillColor = isComplete ? g.color + "18" : "#FFFFFF";
+      const border = isComplete ? g.color : "#DDE8DD";
+      const textColor = isComplete ? "#090909" : "#999";
       svgContent += `
-        <rect x="${x}" y="${y}" width="${nodeW}" height="${nodeH}" rx="1" fill="#0A0A0A" stroke="${border}" stroke-width="${isComplete ? 1.5 : 1}" opacity="${opacity}"/>
-        <text x="${x + nodeW/2}" y="${y + nodeH/2 + 4}" text-anchor="middle" fill="${isComplete ? '#fff' : '#666'}" font-size="10" font-family="Inter,sans-serif">${name}</text>`;
+        <rect x="${x}" y="${y}" width="${nodeW}" height="${nodeH}" rx="0" fill="${fillColor}" stroke="${border}" stroke-width="${isComplete ? 1.5 : 1}"/>
+        <text x="${x + nodeW/2}" y="${y + nodeH/2 + 4}" text-anchor="middle" fill="${textColor}" font-size="10" font-family="IBM Plex Mono,monospace">${name}</text>`;
     });
 
     html += `<h3 style="color:${g.color}">${g.label}</h3>`;
@@ -940,14 +1007,14 @@ function renderChallengeList(days) {
       return `
         <a class="challenge-item" href="${REPO_BASE}${d.folder}" target="_blank">
           <span class="challenge-day">Day ${String(d.day).padStart(3, "0")}</span>
-          <span class="challenge-track" style="color:${color}">${d.track}</span>
-          <span>${d.challenge}</span>
+          <span class="challenge-node" style="background:${color}"></span>
+          <span class="challenge-name">${d.challenge}</span>
           <span class="challenge-date">${d.date}${locStr ? " / " + locStr : ""}</span>
         </a>`;
     }).join("");
 
     if (!filtered.length) {
-      container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-dim);font-size:0.85rem;">No challenges found.</div>`;
+      container.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--dark-gray);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;">No challenges found.</div>`;
     }
   }
 
