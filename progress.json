@@ -6,9 +6,9 @@
       "challenge": "Linear regression from scratch",
       "folder": "day-001-linear-regression",
       "date": "2026-04-02",
-      "my_completed": false,
-      "my_time_seconds": null,
-      "my_completed_date": null,
+      "my_completed": true,
+      "my_time_seconds": 3814,
+      "my_completed_date": "2026-04-07",
       "revealed": false
     },
     {
