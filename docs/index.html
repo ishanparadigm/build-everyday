@@ -635,11 +635,15 @@ function render() {
 
 // --- Streaks ---
 function renderStreaks(days) {
-  const dates = days.map(d => d.date).sort();
-  const uniqueDates = [...new Set(dates)].sort();
+  const allDates = [];
+  days.forEach(d => {
+    allDates.push(d.date);
+    if (d.my_completed_date) allDates.push(d.my_completed_date);
+  });
+  const uniqueDates = [...new Set(allDates)].sort();
 
   // Current streak: count backwards from today
-  const today = "2026-04-06";
+  const today = new Date().toISOString().slice(0, 10);
   let current = 0;
   let check = new Date(today + "T00:00:00");
   while (true) {
