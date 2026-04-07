@@ -35,9 +35,16 @@ def generate_data(
         true_weights: The ground-truth weight vector
         true_bias: The ground-truth bias scalar
     """
-    # Hint: use np.random.default_rng(seed) for reproducibility
-    # Hint: y = X @ true_weights + true_bias + noise
-    raise NotImplementedError("TODO: implement this")
+    rng = np.random.default_rng(seed)
+    if true_weights is None:
+        true_weights = rng.standard_normal(n_features)
+    else:
+        true_weights = np.asarray(true_weights, dtype=float).reshape(n_features)
+
+    X = rng.standard_normal((n_samples, n_features))
+    noise = rng.normal(0.0, noise_std, size=n_samples)
+    y = X @ true_weights + true_bias + noise
+    return X, y, true_weights, float(true_bias)
 
 
 # =============================================================================
@@ -51,8 +58,9 @@ def add_bias_column(X: np.ndarray) -> np.ndarray:
     This lets us absorb the bias term into the weight vector:
         y = w0*1 + w1*x1 + w2*x2 = [1, x1, x2] @ [w0, w1, w2]
     """
-    # Hint: np.ones and np.hstack
-    raise NotImplementedError("TODO: implement this")
+    X = np.asarray(X, dtype=float)
+    ones = np.ones((X.shape[0], 1), dtype=float)
+    return np.hstack([ones, X])
 
 
 # =============================================================================
@@ -70,9 +78,11 @@ def normal_equation(X: np.ndarray, y: np.ndarray) -> np.ndarray:
     Returns:
         w: Weight vector, shape (n_features + 1,)
     """
-    # Hint: compute the Gram matrix (X^T X) and cross-correlation (X^T y)
-    # Hint: use np.linalg.solve instead of np.linalg.inv for numerical stability
-    raise NotImplementedError("TODO: implement this")
+    X = np.asarray(X, dtype=float)
+    y = np.asarray(y, dtype=float)
+    gram = X.T @ X
+    rhs = X.T @ y
+    return np.linalg.solve(gram, rhs)
 
 
 # =============================================================================
@@ -103,10 +113,21 @@ def gradient_descent(
         w: Learned weight vector
         loss_history: List of MSE values at each iteration
     """
-    # Hint: initialize weights to zeros
-    # Hint: each iteration: predictions -> errors -> gradient -> update
-    # Hint: gradient points uphill, so subtract it to go downhill
-    raise NotImplementedError("TODO: implement this")
+    X = np.asarray(X, dtype=float)
+    y = np.asarray(y, dtype=float)
+    n_samples, n_features = X.shape
+    w = np.zeros(n_features, dtype=float)
+    loss_history: list[float] = []
+
+    for i in range(n_iterations):
+        residual = X @ w - y
+        loss_history.append(float(np.mean(residual**2)))
+        if verbose and i % 100 == 0:
+            print(f"  iter {i}: MSE = {loss_history[-1]:.6f}")
+        grad = (2.0 / n_samples) * (X.T @ residual)
+        w -= learning_rate * grad
+
+    return w, loss_history
 
 
 # =============================================================================
@@ -129,10 +150,18 @@ def standardize(
         mean: Mean used for scaling
         std: Std used for scaling
     """
-    # Hint: compute mean and std along axis=0
-    # Hint: handle constant features (std == 0) to avoid division by zero
-    # Hint: return mean and std so you can apply the SAME transform to test data
-    raise NotImplementedError("TODO: implement this")
+    X = np.asarray(X, dtype=float)
+    if mean is None:
+        mean = np.mean(X, axis=0)
+    else:
+        mean = np.asarray(mean, dtype=float)
+    if std is None:
+        std = np.std(X, axis=0, ddof=0)
+    else:
+        std = np.asarray(std, dtype=float)
+    std_safe = np.where(std == 0, 1.0, std)
+    X_scaled = (X - mean) / std_safe
+    return X_scaled, mean, std_safe
 
 
 # =============================================================================
@@ -145,8 +174,9 @@ def mse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
 
     MSE = (1/n) * sum((y_true - y_pred)^2)
     """
-    # Hint: np.mean of squared differences
-    raise NotImplementedError("TODO: implement this")
+    y_true = np.asarray(y_true, dtype=float)
+    y_pred = np.asarray(y_pred, dtype=float)
+    return float(np.mean((y_true - y_pred) ** 2))
 
 
 def r_squared(y_true: np.ndarray, y_pred: np.ndarray) -> float:
@@ -158,8 +188,12 @@ def r_squared(y_true: np.ndarray, y_pred: np.ndarray) -> float:
 
     Returns 1.0 for perfect predictions, 0.0 for mean-level predictions.
     """
-    # Hint: compute residual sum of squares and total sum of squares
-    raise NotImplementedError("TODO: implement this")
+    y_mean = np.mean(y_true)
+    ss_res = np.sum((y_true - y_pred) ** 2)
+    ss_tot = np.sum((y_true - y_mean) ** 2)
+    if ss_tot == 0:
+        return 1.0 if np.isclose(ss_res, 0.0) else 0.0
+    return float(1.0 - ss_res / ss_tot)
 
 
 # =============================================================================
