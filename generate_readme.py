@@ -410,6 +410,21 @@ def main():
     readme_text = replace_section(readme_text, "PROGRESS_BARS", progress_bars_content)
 
     README_PATH.write_text(readme_text)
+
+    # Sync dashboard inline data from progress.json
+    dashboard_path = DOCS_DIR / "index.html"
+    if dashboard_path.exists():
+        html = dashboard_path.read_text()
+        # Replace INLINE_PROGRESS block
+        progress_json = json.dumps(progress, separators=(",", ":"))
+        html = re.sub(
+            r"const INLINE_PROGRESS = \{.*?\};",
+            f"const INLINE_PROGRESS = {progress_json};",
+            html,
+            flags=re.DOTALL,
+        )
+        dashboard_path.write_text(html)
+
     print(f"README.md updated  ({total_days} days, streak {current_streak})")
     print(f"docs/heatmap.svg generated  ({total_loc:,} LOC total)")
 
