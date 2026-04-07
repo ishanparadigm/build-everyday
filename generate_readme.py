@@ -64,8 +64,13 @@ def compute_streaks(progress):
     if not progress["days"]:
         return 0, 0
 
-    dates_with_work = sorted({d["date"] for d in progress["days"]})
-    date_set = {datetime.strptime(d, "%Y-%m-%d").date() for d in dates_with_work}
+    # Include both generation dates and solve dates as "active" days
+    raw_dates = set()
+    for d in progress["days"]:
+        raw_dates.add(d["date"])
+        if d.get("my_completed_date"):
+            raw_dates.add(d["my_completed_date"])
+    date_set = {datetime.strptime(d, "%Y-%m-%d").date() for d in raw_dates}
 
     # Current streak: count backwards from today
     today = date.today()
