@@ -98,11 +98,29 @@ start_epoch=$(date -j -f '%Y-%m-%d' "$START_DATE" '+%s')
 today_epoch=$(date -j -f '%Y-%m-%d' "$today" '+%s')
 expected_days=$(( (today_epoch - start_epoch) / 86400 ))
 
-days_behind=$(( expected_days - current_day_count ))
+# Check if today already has a challenge (by date in progress.json)
+today_has_challenge=false
+if command -v python3 &>/dev/null && [ -f "$PROGRESS_FILE" ]; then
+  today_has_challenge=$(python3 -c "
+import json
+with open('$PROGRESS_FILE') as f:
+    d = json.load(f)
+today = '$today'
+print('true' if any(e['date'] == today for e in d['days']) else 'false')
+" 2>/dev/null || echo "false")
+fi
 
-if [ "$days_behind" -le 0 ]; then
-  log "OK: up to date ($current_day_count days done, $expected_days expected)"
+# Generate if: behind on calendar days OR today doesn't have a challenge yet
+days_behind=$(( expected_days - current_day_count ))
+if [ "$days_behind" -le 0 ] && [ "$today_has_challenge" = "true" ]; then
+  log "OK: up to date ($current_day_count days done, $expected_days expected, today covered)"
   exit 0
+fi
+
+# If we're ahead on count but today needs a challenge, generate 1
+if [ "$days_behind" -le 0 ]; then
+  days_behind=1
+  log "INFO: ahead on count ($current_day_count/$expected_days) but today ($today) needs a challenge"
 fi
 
 if [ "$days_behind" -gt "$MAX_CATCHUP" ]; then
