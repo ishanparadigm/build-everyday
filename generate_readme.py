@@ -411,12 +411,16 @@ def main():
 
     README_PATH.write_text(readme_text)
 
-    # Sync dashboard inline data from progress.json
+    # Sync dashboard inline data from progress.json (with LOC stats)
     dashboard_path = DOCS_DIR / "index.html"
     if dashboard_path.exists():
         html = dashboard_path.read_text()
-        # Replace INLINE_PROGRESS block
-        progress_json = json.dumps(progress, separators=(",", ":"))
+        # Inject LOC stats into progress data for the dashboard
+        loc_by_day = {day_num: loc for day_num, _, loc in per_day_loc}
+        dashboard_progress = json.loads(json.dumps(progress))
+        for entry in dashboard_progress["days"]:
+            entry["stats"] = {"loc": loc_by_day.get(entry["day"], 0)}
+        progress_json = json.dumps(dashboard_progress, separators=(",", ":"))
         html = re.sub(
             r"const INLINE_PROGRESS = \{.*?\};",
             f"const INLINE_PROGRESS = {progress_json};",
