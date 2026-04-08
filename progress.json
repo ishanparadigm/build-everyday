@@ -76,6 +76,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 8,
+      "track": "robotics",
+      "challenge": "Kinematics - forward and inverse",
+      "folder": "day-008-kinematics",
+      "date": "2026-04-08",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

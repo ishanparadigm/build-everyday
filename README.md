@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-7-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-2_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--07-lightgrey)
+![Days](https://img.shields.io/badge/days-8-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-3_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--08-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 2 days | Longest: 2 days
+### 🔥 Current Streak: 3 days | Longest: 3 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███░░░░░░░░░░░░░░░░░ 4/24`  
 **Crypto     ** `█░░░░░░░░░░░░░░░░░░░ 1/24`  
-**Robotics   ** `██░░░░░░░░░░░░░░░░░░ 2/24`  
+**Robotics   ** `███░░░░░░░░░░░░░░░░░ 3/24`  
 **Integration** `░░░░░░░░░░░░░░░░░░░░ 0/12`  
 
-**Total LOC**: 3,154 lines across 7 solutions
+**Total LOC**: 3,697 lines across 8 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -63,6 +63,7 @@ day-XXX-topic/
 | Week | Mon (AI) | Tue (Crypto) | Wed (Robotics) | Thu (AI) | Fri (Crypto) | Sat (Robotics) | Sun (Integration) |
 |------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
+| 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | — | — | — | — |
 
 ## Progress
 
@@ -73,3 +74,4 @@ day-XXX-topic/
 - Day 005: [K-Means Clustering](day-005-kmeans-clustering/) - Unsupervised clustering with K-Means++ initialization, elbow analysis, and convergence visualization
 - Day 006: [PID Controller Simulation](day-006-pid-controller/) - Proportional-integral-derivative control with thermal plant simulation, step response analysis, and tuning exploration
 - Day 007: [State Machine for Robot Behavior](day-007-state-machine/) - Generic FSM engine with guard conditions, entry/exit actions, and patrol robot behavior simulation
+- Day 008: [Forward and Inverse Kinematics](day-008-kinematics/) - 2D robotic arm kinematics with analytical IK, Jacobian pseudo-inverse numerical IK, and workspace analysis
