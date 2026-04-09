@@ -87,6 +87,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 9,
+      "track": "ai",
+      "challenge": "KNN from scratch",
+      "folder": "day-009-knn-classifier",
+      "date": "2026-04-09",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
