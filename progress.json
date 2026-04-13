@@ -120,6 +120,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 12,
+      "track": "ai",
+      "challenge": "Naive Bayes classifier",
+      "folder": "day-012-naive-bayes",
+      "date": "2026-04-13",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

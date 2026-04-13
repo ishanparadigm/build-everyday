@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-11-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-4_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--13-lightgrey)
+![Days](https://img.shields.io/badge/days-12-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-4_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--13-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 0 days | Longest: 4 days
+### 🔥 Current Streak: 3 days | Longest: 4 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `████░░░░░░░░░░░░░░░░ 5/24`  
+**AI         ** `█████░░░░░░░░░░░░░░░ 6/24`  
 **Crypto     ** `█░░░░░░░░░░░░░░░░░░░ 1/24`  
 **Robotics   ** `██░░░░░░░░░░░░░░░░░░ 3/24`  
 **Integration** `██░░░░░░░░░░░░░░░░░░ 2/12`  
 
-**Total LOC**: 5,200 lines across 11 solutions
+**Total LOC**: 5,600 lines across 12 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -64,7 +64,7 @@ day-XXX-topic/
 |------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
-| 3 | — | — | — | — | — | — | [011](day-011-ml-object-follower/) |
+| 3 | [012](day-012-naive-bayes/) | — | — | — | — | — | [011](day-011-ml-object-follower/) |
 
 ## Progress
 
@@ -79,3 +79,4 @@ day-XXX-topic/
 - Day 009: [KNN from Scratch](day-009-knn-classifier/) - K-Nearest Neighbors with multiple distance metrics, weighted voting, cross-validation for k selection, and curse of dimensionality analysis
 - Day 010: [AI-Powered Crypto Price Predictor](day-010-crypto-price-predictor/) - Integration of ML regression with crypto market data for price prediction
 - Day 011: [Robot That Follows ML-Detected Objects](day-011-ml-object-follower/) - Integration of KNN detection, PID control, and state machines for autonomous target following
+- Day 012: [Naive Bayes Classifier](day-012-naive-bayes/) - Multinomial Naive Bayes spam detector with Bayesian reasoning, log-space arithmetic, and Laplace smoothing
