@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-9-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-4_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--12-lightgrey)
+![Days](https://img.shields.io/badge/days-11-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-4_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--13-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -51,9 +51,9 @@ day-XXX-topic/
 **AI         ** `████░░░░░░░░░░░░░░░░ 5/24`  
 **Crypto     ** `█░░░░░░░░░░░░░░░░░░░ 1/24`  
 **Robotics   ** `██░░░░░░░░░░░░░░░░░░ 3/24`  
-**Integration** `░░░░░░░░░░░░░░░░░░░░ 0/12`  
+**Integration** `██░░░░░░░░░░░░░░░░░░ 2/12`  
 
-**Total LOC**: 4,216 lines across 9 solutions
+**Total LOC**: 5,200 lines across 11 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -63,7 +63,8 @@ day-XXX-topic/
 | Week | Mon (AI) | Tue (Crypto) | Wed (Robotics) | Thu (AI) | Fri (Crypto) | Sat (Robotics) | Sun (Integration) |
 |------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
-| 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | — |
+| 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
+| 3 | — | — | — | — | — | — | [011](day-011-ml-object-follower/) |
 
 ## Progress
 
@@ -76,3 +77,5 @@ day-XXX-topic/
 - Day 007: [State Machine for Robot Behavior](day-007-state-machine/) - Generic FSM engine with guard conditions, entry/exit actions, and patrol robot behavior simulation
 - Day 008: [Forward and Inverse Kinematics](day-008-kinematics/) - 2D robotic arm kinematics with analytical IK, Jacobian pseudo-inverse numerical IK, and workspace analysis
 - Day 009: [KNN from Scratch](day-009-knn-classifier/) - K-Nearest Neighbors with multiple distance metrics, weighted voting, cross-validation for k selection, and curse of dimensionality analysis
+- Day 010: [AI-Powered Crypto Price Predictor](day-010-crypto-price-predictor/) - Integration of ML regression with crypto market data for price prediction
+- Day 011: [Robot That Follows ML-Detected Objects](day-011-ml-object-follower/) - Integration of KNN detection, PID control, and state machines for autonomous target following

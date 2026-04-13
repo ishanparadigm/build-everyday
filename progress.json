@@ -98,6 +98,28 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 10,
+      "track": "integration",
+      "challenge": "AI-powered crypto price predictor",
+      "folder": "day-010-crypto-price-predictor",
+      "date": "2026-04-12",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
+    },
+    {
+      "day": 11,
+      "track": "integration",
+      "challenge": "Robot that follows ML-detected objects",
+      "folder": "day-011-ml-object-follower",
+      "date": "2026-04-13",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
