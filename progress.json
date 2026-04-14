@@ -131,6 +131,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 13,
+      "track": "crypto",
+      "challenge": "Merkle tree from scratch",
+      "folder": "day-013-merkle-tree",
+      "date": "2026-04-14",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
