@@ -142,6 +142,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 14,
+      "track": "robotics",
+      "challenge": "Motor control simulation",
+      "folder": "day-014-motor-control",
+      "date": "2026-04-15",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
