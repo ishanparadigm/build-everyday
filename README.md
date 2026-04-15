@@ -53,7 +53,7 @@ day-XXX-topic/
 **Robotics   ** `███░░░░░░░░░░░░░░░░░ 4/24`  
 **Integration** `███░░░░░░░░░░░░░░░░░ 2/12`  
 
-**Total LOC**: 7,091 lines across 14 solutions
+**Total LOC**: 6,536 lines across 14 solutions
 <!-- PROGRESS_BARS:END -->
 
 
