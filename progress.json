@@ -153,6 +153,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 15,
+      "track": "ai",
+      "challenge": "Simple neural network (forward pass)",
+      "folder": "day-015-neural-network-forward",
+      "date": "2026-04-16",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

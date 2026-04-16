@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-14-blue) ![Streak](https://img.shields.io/badge/streak-4_days-orange) ![Longest](https://img.shields.io/badge/longest-4_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--15-lightgrey)
+![Days](https://img.shields.io/badge/days-15-blue) ![Streak](https://img.shields.io/badge/streak-5_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--16-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 4 days | Longest: 4 days
+### 🔥 Current Streak: 5 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `█████░░░░░░░░░░░░░░░ 6/24`  
+**AI         ** `██████░░░░░░░░░░░░░░ 7/24`  
 **Crypto     ** `██░░░░░░░░░░░░░░░░░░ 2/24`  
 **Robotics   ** `███░░░░░░░░░░░░░░░░░ 4/24`  
 **Integration** `███░░░░░░░░░░░░░░░░░ 2/12`  
 
-**Total LOC**: 6,536 lines across 14 solutions
+**Total LOC**: 7,050 lines across 15 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -64,7 +64,7 @@ day-XXX-topic/
 |------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
-| 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) | [014](day-014-motor-control/) | — | — | — | [011](day-011-ml-object-follower/) |
+| 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) | [014](day-014-motor-control/) | [015](day-015-neural-network-forward/) | — | — | [011](day-011-ml-object-follower/) |
 
 ## Progress
 
@@ -82,3 +82,4 @@ day-XXX-topic/
 - Day 012: [Naive Bayes Classifier](day-012-naive-bayes/) - Multinomial Naive Bayes spam detector with Bayesian reasoning, log-space arithmetic, and Laplace smoothing
 - Day 013: [Merkle Tree from Scratch](day-013-merkle-tree/) - Binary hash tree with O(log n) inclusion proofs, tamper detection, and domain-separated hashing
 - Day 014: [Motor Control Simulation](day-014-motor-control/) - DC motor dynamics with RK4 integration, PWM speed control, and cascaded PID position/velocity controllers
+- Day 015: [Simple Neural Network Forward Pass](day-015-neural-network-forward/) - Feedforward network with He initialization, ReLU/sigmoid/softmax activations, cross-entropy loss, and mini-batch processing
