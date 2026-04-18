@@ -164,6 +164,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 16,
+      "track": "robotics",
+      "challenge": "Sensor reading simulator",
+      "folder": "day-016-sensor-simulator",
+      "date": "2026-04-18",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
