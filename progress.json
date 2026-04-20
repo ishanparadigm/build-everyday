@@ -197,6 +197,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 19,
+      "track": "integration",
+      "challenge": "Autonomous trading bot skeleton",
+      "folder": "day-019-trading-bot-skeleton",
+      "date": "2026-04-20",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
