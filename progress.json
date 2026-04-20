@@ -188,11 +188,11 @@
       "revealed": false
     },
     {
-      "day": 17,
-      "track": "robotics",
-      "challenge": "Obstacle avoidance algorithm",
-      "folder": "day-017-obstacle-avoidance",
-      "date": "2026-04-18",
+      "day": 18,
+      "track": "integration",
+      "challenge": "On-chain ML model registry",
+      "folder": "day-018-onchain-ml-registry",
+      "date": "2026-04-20",
       "my_completed": false,
       "my_time_seconds": null,
       "my_completed_date": null,

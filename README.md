@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-18-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--19-lightgrey)
+![Days](https://img.shields.io/badge/days-19-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--20-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -51,9 +51,9 @@ day-XXX-topic/
 **AI         ** `██████░░░░░░░░░░░░░░ 7/24`  
 **Crypto     ** `██░░░░░░░░░░░░░░░░░░ 2/24`  
 **Robotics   ** `█████░░░░░░░░░░░░░░░ 6/24`  
-**Integration** `███░░░░░░░░░░░░░░░░░ 2/12`  
+**Integration** `███░░░░░░░░░░░░░░░░░ 3/12`  
 
-**Total LOC**: 8,799 lines across 18 solutions
+**Total LOC**: 8,799 lines across 19 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -64,7 +64,7 @@ day-XXX-topic/
 |------|----------|--------------|-----------------|----------|--------------|-----------------|-------------------|
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
-| 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) | [014](day-014-motor-control/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) |
+| 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) | [014](day-014-motor-control/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) |
 
 ## Progress
 
@@ -85,3 +85,4 @@ day-XXX-topic/
 - Day 015: [Simple Neural Network Forward Pass](day-015-neural-network-forward/) - Feedforward network with He initialization, ReLU/sigmoid/softmax activations, cross-entropy loss, and mini-batch processing
 - Day 016: [Sensor Reading Simulator](day-016-sensor-simulator/) - Robotics sensor framework with LIDAR raycasting, IMU bias drift, odometry dead reckoning, and Gaussian sensor fusion
 - Day 017: [Obstacle Avoidance Algorithm](day-017-obstacle-avoidance/) - Vector Field Histogram (VFH) with ray-cast sensors, polar histogram construction, valley detection, and cost-based steering
+- Day 018: [On-Chain ML Model Registry](day-018-onchain-ml-registry/) - Blockchain-backed model registry with content-addressed identity, HMAC signatures, Merkle inclusion proofs, and tamper detection
