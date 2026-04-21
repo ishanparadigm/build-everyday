@@ -208,6 +208,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 20,
+      "track": "crypto",
+      "challenge": "Digital signatures (ECDSA basics)",
+      "folder": "day-020-digital-signatures",
+      "date": "2026-04-21",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
