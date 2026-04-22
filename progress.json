@@ -219,6 +219,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 21,
+      "track": "robotics",
+      "challenge": "Line-following robot logic",
+      "folder": "day-021-line-following-robot",
+      "date": "2026-04-22",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
