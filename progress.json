@@ -230,6 +230,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 22,
+      "track": "robotics",
+      "challenge": "Servo control patterns",
+      "folder": "day-022-servo-control",
+      "date": "2026-04-23",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
