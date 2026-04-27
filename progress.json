@@ -263,6 +263,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 26,
+      "track": "integration",
+      "challenge": "Cryptographically signed robot command protocol",
+      "folder": "day-026-signed-robot-commands",
+      "date": "2026-04-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
