@@ -241,6 +241,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 24,
+      "track": "integration",
+      "challenge": "Blockchain-verified sensor data pipeline",
+      "folder": "day-024-blockchain-sensor-integrity",
+      "date": "2026-04-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
