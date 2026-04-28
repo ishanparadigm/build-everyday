@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-25-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--27-lightgrey)
+![Days](https://img.shields.io/badge/days-26-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--28-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 1 days | Longest: 5 days
+### 🔥 Current Streak: 2 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `██████░░░░░░░░░░░░░░ 7/24`  
-**Crypto     ** `██░░░░░░░░░░░░░░░░░░ 3/24`  
+**Crypto     ** `███░░░░░░░░░░░░░░░░░ 4/24`  
 **Robotics   ** `███████░░░░░░░░░░░░░ 8/24`  
 **Integration** `███████░░░░░░░░░░░░░ 4/12`  
 
-**Total LOC**: 13,991 lines across 25 solutions
+**Total LOC**: 14,491 lines across 26 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -65,7 +65,7 @@ day-XXX-topic/
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
-| 4 | — | — | [022](day-022-servo-control/) | — | — | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
+| 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) | — | — | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 
 ## Progress
 
@@ -94,3 +94,4 @@ day-XXX-topic/
 - Day 024: [Blockchain-Verified Sensor Data Pipeline](day-024-blockchain-sensor-integrity/) - Integration of robot sensor simulation, hash-chained integrity ledger, rolling z-score anomaly detection, and tamper-evidence verification
 - Day 025: [AI Anomaly Detection with Blockchain Audit Trail](day-025-anomaly-blockchain-audit/) - Isolation Forest from scratch for unsupervised anomaly detection with SHA-256 hash-chained audit ledger and tamper-evidence verification
 - Day 026: [Cryptographically Signed Robot Command Protocol](day-026-signed-robot-commands/) - ECDSA-signed commands with Merkle batch verification, state machine execution flow, PID-controlled movement, and attack resistance (replay, tampering, unauthorized access)
+- Day 027: [Proof of Work Simulation](day-027-proof-of-work/) - SHA-256 mining loop with dynamic difficulty adjustment, chain validation, 51% attack Monte Carlo simulation, and exponential scaling analysis

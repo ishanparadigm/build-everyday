@@ -274,6 +274,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 27,
+      "track": "crypto",
+      "challenge": "Proof of work simulation",
+      "folder": "day-027-proof-of-work",
+      "date": "2026-04-28",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
