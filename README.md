@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-26-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--28-lightgrey)
+![Days](https://img.shields.io/badge/days-26-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--04--29-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,7 +44,7 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 2 days | Longest: 5 days
+### 🔥 Current Streak: 0 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
