@@ -285,6 +285,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 28,
+      "track": "robotics",
+      "challenge": "A* pathfinding",
+      "folder": "day-028-astar-pathfinding",
+      "date": "2026-04-30",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
