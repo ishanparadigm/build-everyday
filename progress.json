@@ -296,6 +296,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 29,
+      "track": "crypto",
+      "challenge": "Hello World Solidity contract",
+      "folder": "day-029-hello-solidity",
+      "date": "2026-05-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
