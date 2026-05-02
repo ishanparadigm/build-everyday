@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-29-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--02-lightgrey)
+![Days](https://img.shields.io/badge/days-30-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--02-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -49,11 +49,11 @@ day-XXX-topic/
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `██████░░░░░░░░░░░░░░ 7/24`  
-**Crypto     ** `█████░░░░░░░░░░░░░░░ 6/24`  
+**Crypto     ** `██████░░░░░░░░░░░░░░ 7/24`  
 **Robotics   ** `████████░░░░░░░░░░░░ 9/24`  
 **Integration** `███████░░░░░░░░░░░░░ 4/12`  
 
-**Total LOC**: 15,386 lines across 29 solutions
+**Total LOC**: 15,386 lines across 30 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -65,7 +65,7 @@ day-XXX-topic/
 | 1 | — | [001](day-001-linear-regression/) | [002](day-002-sha256-hash/) | [003](day-003-logistic-regression/) | — | [004](day-004-decision-tree/) | [005](day-005-kmeans-clustering/) |
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
-| 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
+| 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 
 ## Progress
 
@@ -98,3 +98,4 @@ day-XXX-topic/
 - Day 028: [A* Pathfinding](day-028-astar-pathfinding/) - A* search on 2D grids with Manhattan/Euclidean/Octile/Chebyshev heuristics, 4-dir and 8-dir movement, corner-cutting prevention, and exploration efficiency comparison
 - Day 029: [Hello World Solidity Contract](day-029-hello-solidity/) - Mini smart contract VM with slot-based storage, function selector dispatch, gas metering with cold/warm access costs, event emission, owner access control, and revert/rollback semantics
 - Day 030: [ERC-20 Token Implementation](day-030-erc20-token/) - Full ERC-20 standard with approve/transferFrom delegation, mint/burn supply management, safe allowance helpers, event logging, and approval race condition analysis
+- Day 031: [ERC-721 NFT Contract](day-031-erc721-nft/) - Full ERC-721 standard with per-token and operator approvals, safe transfer receiver callbacks, mint/burn, metadata URIs, and enumerable extension with O(1) swap-and-pop removal
