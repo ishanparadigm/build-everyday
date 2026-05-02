@@ -307,6 +307,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 30,
+      "track": "crypto",
+      "challenge": "ERC-20 token implementation",
+      "folder": "day-030-erc20-token",
+      "date": "2026-05-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
