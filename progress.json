@@ -329,6 +329,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 32,
+      "track": "integration",
+      "challenge": "Smart contract that uses oracle ML predictions",
+      "folder": "day-032-oracle-ml-contract",
+      "date": "2026-05-03",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
