@@ -340,6 +340,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 33,
+      "track": "ai",
+      "challenge": "Prompt chaining with Claude API",
+      "folder": "day-033-prompt-chaining",
+      "date": "2026-05-04",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
