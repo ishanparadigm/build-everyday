@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-32-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--05-lightgrey)
+![Days](https://img.shields.io/badge/days-33-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--06-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -50,10 +50,10 @@ day-XXX-topic/
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███████░░░░░░░░░░░░░ 8/24`  
 **Crypto     ** `██████░░░░░░░░░░░░░░ 7/24`  
-**Robotics   ** `████████░░░░░░░░░░░░ 9/24`  
+**Robotics   ** `█████████░░░░░░░░░░░ 10/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 18,177 lines across 32 solutions
+**Total LOC**: 18,677 lines across 33 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -66,7 +66,7 @@ day-XXX-topic/
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
-| 5 | [033](day-033-prompt-chaining/) | — | — | — | — | — | [032](day-032-oracle-ml-contract/) |
+| 5 | [033](day-033-prompt-chaining/) | — | [034](day-034-rrt-path-planning/) | — | — | — | [032](day-032-oracle-ml-contract/) |
 
 ## Progress
 
@@ -102,3 +102,4 @@ day-XXX-topic/
 - Day 031: [ERC-721 NFT Contract](day-031-erc721-nft/) - Full ERC-721 standard with per-token and operator approvals, safe transfer receiver callbacks, mint/burn, metadata URIs, and enumerable extension with O(1) swap-and-pop removal
 - Day 032: [Smart Contract with Oracle ML Predictions](day-032-oracle-ml-contract/) - ML credit risk model feeding oracle contract with commit-reveal, median aggregation, staleness checks, and lending contract with piecewise interest rate curves and front-running prevention
 - Day 033: [Prompt Chaining with Claude API](day-033-prompt-chaining/) - Multi-step LLM pipeline with sequential/parallel execution, JSON validation between steps, retry logic with error feedback, and per-step observability metrics
+- Day 034: [RRT Path Planning](day-034-rrt-path-planning/) - Rapidly-exploring Random Trees with goal biasing, edge collision detection, path smoothing via shortcutting, and RRT* asymptotically optimal rewiring
