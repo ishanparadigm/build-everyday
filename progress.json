@@ -384,6 +384,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 38,
+      "track": "crypto",
+      "challenge": "Staking contract",
+      "folder": "day-038-staking-contract",
+      "date": "2026-05-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
