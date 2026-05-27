@@ -395,6 +395,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 39,
+      "track": "crypto",
+      "challenge": "Multisig wallet",
+      "folder": "day-039-multisig-wallet",
+      "date": "2026-05-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

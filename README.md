@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-36-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--27-lightgrey)
+![Days](https://img.shields.io/badge/days-37-blue) ![Streak](https://img.shields.io/badge/streak-4_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--27-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -49,11 +49,11 @@ day-XXX-topic/
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███████░░░░░░░░░░░░░ 8/24`  
-**Crypto     ** `████████░░░░░░░░░░░░ 10/24`  
+**Crypto     ** `█████████░░░░░░░░░░░ 11/24`  
 **Robotics   ** `████████░░░░░░░░░░░░ 10/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 20,500 lines across 36 solutions
+**Total LOC**: 21,100 lines across 37 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -66,7 +66,7 @@ day-XXX-topic/
 | 2 | [006](day-006-pid-controller/) [007](day-007-state-machine/) | — | [008](day-008-kinematics/) | [009](day-009-knn-classifier/) | — | — | [010](day-010-crypto-price-predictor/) |
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
-| 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) | [034](day-034-rrt-path-planning/) | — | — | — | [032](day-032-oracle-ml-contract/) |
+| 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | — | — | [032](day-032-oracle-ml-contract/) |
 
 ## Progress
 
@@ -106,3 +106,4 @@ day-XXX-topic/
 - Day 036: [Smart Contract Testing Framework](day-036-hardhat-testing/) - Simulated EVM with ABI encoding/decoding, contract deployment, snapshot/revert isolation, ERC-20 token testing, and assertion utilities for reverts, events, and balance changes
 - Day 037: [DEX Swap Contract](day-037-dex-swap-contract/) - Constant-product AMM with liquidity provision/withdrawal, LP token accounting, fee accrual, slippage protection, impermanent loss calculation, and arbitrage opportunity detection
 - Day 038: [Staking Contract](day-038-staking-contract/) - Synthetix-style staking rewards with O(1) reward-per-token accumulator, time-weighted distribution, mid-period top-ups, leaked reward handling, and checks-effects-interactions pattern
+- Day 039: [Multisig Wallet](day-039-multisig-wallet/) - M-of-N multi-signature wallet with transaction lifecycle management, confirmation/revocation, self-call admin governance, threshold auto-adjustment, and comprehensive access control
