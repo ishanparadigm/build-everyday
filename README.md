@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-38-blue) ![Streak](https://img.shields.io/badge/streak-5_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--27-lightgrey)
+![Days](https://img.shields.io/badge/days-38-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--27-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -53,7 +53,7 @@ day-XXX-topic/
 **Robotics   ** `████████░░░░░░░░░░░░ 10/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 21,700 lines across 38 solutions
+**Total LOC**: 22,686 lines across 38 solutions
 <!-- PROGRESS_BARS:END -->
 
 
