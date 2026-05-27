@@ -362,6 +362,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 36,
+      "track": "crypto",
+      "challenge": "Hardhat testing setup",
+      "folder": "day-036-hardhat-testing",
+      "date": "2026-05-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
