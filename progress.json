@@ -373,6 +373,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 37,
+      "track": "crypto",
+      "challenge": "DEX swap contract",
+      "folder": "day-037-dex-swap-contract",
+      "date": "2026-05-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
