@@ -406,6 +406,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 40,
+      "track": "crypto",
+      "challenge": "Flash loan basics",
+      "folder": "day-040-flash-loan-basics",
+      "date": "2026-05-27",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
