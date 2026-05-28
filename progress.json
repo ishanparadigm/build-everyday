@@ -417,6 +417,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 41,
+      "track": "robotics",
+      "challenge": "Maze solver with BFS/DFS",
+      "folder": "day-041-maze-solver",
+      "date": "2026-05-28",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
