@@ -461,6 +461,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 45,
+      "track": "robotics",
+      "challenge": "Kalman filter basics",
+      "folder": "day-045-kalman-filter",
+      "date": "2026-05-28",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
