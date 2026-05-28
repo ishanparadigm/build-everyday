@@ -450,6 +450,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 44,
+      "track": "robotics",
+      "challenge": "SLAM concept implementation",
+      "folder": "day-044-slam-concept",
+      "date": "2026-05-28",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

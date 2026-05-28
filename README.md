@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-41-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--28-lightgrey)
+![Days](https://img.shields.io/badge/days-42-blue) ![Streak](https://img.shields.io/badge/streak-4_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--28-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 2 days | Longest: 5 days
+### 🔥 Current Streak: 4 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███████░░░░░░░░░░░░░ 8/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
-**Robotics   ** `█████████░░░░░░░░░░░ 13/24`  
+**Robotics   ** `██████████░░░░░░░░░░ 14/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 23,786 lines across 41 solutions
+**Total LOC**: 24,200 lines across 42 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -67,7 +67,7 @@ day-XXX-topic/
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 | 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | [040](day-040-flash-loan-basics/) | — | [032](day-032-oracle-ml-contract/) |
-| 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) | — | — | — | — |
+| 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) | — | — | — | — |
 
 ## Progress
 
@@ -112,3 +112,4 @@ day-XXX-topic/
 - Day 041: [Maze Solver with BFS/DFS](day-041-maze-solver/) - BFS and DFS maze solvers with FIFO/LIFO exploration, visited-on-enqueue optimization, path reconstruction via parent pointers, and quantitative algorithm comparison
 - Day 042: [Robot Arm Trajectory Planning](day-042-robot-arm-trajectory/) - 2-link arm trajectory planner with forward/inverse kinematics, trapezoidal velocity profiles, cubic polynomial trajectories, multi-waypoint planning with via-point velocity continuity, and joint constraint validation
 - Day 043: [Swarm Behavior Simulation](day-043-swarm-behavior/) - Reynolds' Boids with separation/alignment/cohesion, spatial hashing for O(n) neighbor queries, obstacle avoidance, goal-seeking with arrival behavior, and swarm quality metrics
+- Day 044: [SLAM Concept Implementation](day-044-slam-concept/) - EKF-SLAM with joint robot-landmark state estimation, Jacobian-based uncertainty propagation, cross-correlation updates, landmark initialization, and 18x error reduction vs pure odometry
