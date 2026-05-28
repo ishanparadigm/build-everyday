@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-39-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--28-lightgrey)
+![Days](https://img.shields.io/badge/days-40-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--28-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -50,10 +50,10 @@ day-XXX-topic/
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███████░░░░░░░░░░░░░ 8/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
-**Robotics   ** `█████████░░░░░░░░░░░ 11/24`  
+**Robotics   ** `█████████░░░░░░░░░░░ 12/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 22,686 lines across 39 solutions
+**Total LOC**: 23,186 lines across 40 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -67,7 +67,7 @@ day-XXX-topic/
 | 3 | [012](day-012-naive-bayes/) | [013](day-013-merkle-tree/) [020](day-020-digital-signatures/) | [014](day-014-motor-control/) [021](day-021-line-following-robot/) | [015](day-015-neural-network-forward/) | — | [016](day-016-sensor-simulator/) [017](day-017-obstacle-avoidance/) | [011](day-011-ml-object-follower/) [018](day-018-onchain-ml-registry/) [019](day-019-trading-bot-skeleton/) |
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 | 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | [040](day-040-flash-loan-basics/) | — | [032](day-032-oracle-ml-contract/) |
-| 6 | — | — | [041](day-041-maze-solver/) | — | — | — | — |
+| 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) | — | — | — | — |
 
 ## Progress
 
@@ -110,3 +110,4 @@ day-XXX-topic/
 - Day 039: [Multisig Wallet](day-039-multisig-wallet/) - M-of-N multi-signature wallet with transaction lifecycle management, confirmation/revocation, self-call admin governance, threshold auto-adjustment, and comprehensive access control
 - Day 040: [Flash Loan Basics](day-040-flash-loan-basics/) - Flash loan pool with atomic transaction guarantees, callback-based borrowing, cross-exchange arbitrage execution, fee accounting in basis points, and state rollback on failed repayment
 - Day 041: [Maze Solver with BFS/DFS](day-041-maze-solver/) - BFS and DFS maze solvers with FIFO/LIFO exploration, visited-on-enqueue optimization, path reconstruction via parent pointers, and quantitative algorithm comparison
+- Day 042: [Robot Arm Trajectory Planning](day-042-robot-arm-trajectory/) - 2-link arm trajectory planner with forward/inverse kinematics, trapezoidal velocity profiles, cubic polynomial trajectories, multi-waypoint planning with via-point velocity continuity, and joint constraint validation
