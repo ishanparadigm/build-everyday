@@ -472,6 +472,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 46,
+      "track": "ai",
+      "challenge": "Build a RAG pipeline",
+      "folder": "day-046-rag-pipeline",
+      "date": "2026-05-29",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
