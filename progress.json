@@ -494,6 +494,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 48,
+      "track": "ai",
+      "challenge": "Tool-using LLM agent",
+      "folder": "day-048-tool-using-llm-agent",
+      "date": "2026-05-29",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
