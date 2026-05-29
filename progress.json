@@ -483,6 +483,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 47,
+      "track": "ai",
+      "challenge": "Embeddings and vector search",
+      "folder": "day-047-embeddings-vector-search",
+      "date": "2026-05-29",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

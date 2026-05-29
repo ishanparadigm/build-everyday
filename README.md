@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-44-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--29-lightgrey)
+![Days](https://img.shields.io/badge/days-45-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--29-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -48,12 +48,12 @@ day-XXX-topic/
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `████████░░░░░░░░░░░░ 9/24`  
+**AI         ** `████████░░░░░░░░░░░░ 10/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
 **Robotics   ** `████████████░░░░░░░░ 15/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 25,313 lines across 44 solutions
+**Total LOC**: 25,313 lines across 45 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -68,6 +68,7 @@ day-XXX-topic/
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 | 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | [040](day-040-flash-loan-basics/) | — | [032](day-032-oracle-ml-contract/) |
 | 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) [045](day-045-kalman-filter/) | [046](day-046-rag-pipeline/) | — | — | — |
+| 7 | — | — | — | [047](day-047-embeddings-vector-search/) | — | — | — |
 
 ## Progress
 
@@ -115,3 +116,4 @@ day-XXX-topic/
 - Day 044: [SLAM Concept Implementation](day-044-slam-concept/) - EKF-SLAM with joint robot-landmark state estimation, Jacobian-based uncertainty propagation, cross-correlation updates, landmark initialization, and 18x error reduction vs pure odometry
 - Day 045: [Kalman Filter Basics](day-045-kalman-filter/) - Linear Kalman filter from scratch with predict-update cycle, Kalman gain convergence, constant-velocity tracking, hidden state estimation, and filter consistency validation
 - Day 046: [Build a RAG Pipeline](day-046-rag-pipeline/) - Retrieval-Augmented Generation with document chunking, TF-IDF embeddings, cosine similarity vector search, prompt construction with source attribution, and extractive answer generation
+- Day 047: [Embeddings and Vector Search](day-047-embeddings-vector-search/) - TF-IDF vectorization from scratch, cosine/euclidean/dot-product distance metrics, brute-force k-NN search, LSH approximate nearest neighbor indexing, and recall@k evaluation
