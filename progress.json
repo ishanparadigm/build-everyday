@@ -505,6 +505,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 49,
+      "track": "ai",
+      "challenge": "Fine-tuning sentiment classifier",
+      "folder": "day-049-finetune-sentiment",
+      "date": "2026-05-29",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
