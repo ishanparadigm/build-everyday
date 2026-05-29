@@ -516,6 +516,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 50,
+      "track": "ai",
+      "challenge": "Multi-agent conversation system",
+      "folder": "day-050-multi-agent-conversation",
+      "date": "2026-05-29",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
