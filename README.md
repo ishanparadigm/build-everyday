@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-48-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--29-lightgrey)
+![Days](https://img.shields.io/badge/days-49-blue) ![Streak](https://img.shields.io/badge/streak-4_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--05--30-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -49,11 +49,11 @@ day-XXX-topic/
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `███████████░░░░░░░░░ 13/24`  
-**Crypto     ** `██████████░░░░░░░░░░ 12/24`  
+**Crypto     ** `██████████░░░░░░░░░░ 13/24`  
 **Robotics   ** `████████████░░░░░░░░ 15/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 29,407 lines across 48 solutions
+**Total LOC**: 29,407 lines across 49 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -68,7 +68,7 @@ day-XXX-topic/
 | 4 | — | [027](day-027-proof-of-work/) | [022](day-022-servo-control/) [028](day-028-astar-pathfinding/) | — | [029](day-029-hello-solidity/) [030](day-030-erc20-token/) [031](day-031-erc721-nft/) | — | [024](day-024-blockchain-sensor-integrity/) [025](day-025-anomaly-blockchain-audit/) [026](day-026-signed-robot-commands/) |
 | 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | [040](day-040-flash-loan-basics/) | — | [032](day-032-oracle-ml-contract/) |
 | 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) [045](day-045-kalman-filter/) | [046](day-046-rag-pipeline/) | — | — | — |
-| 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | — | — | — |
+| 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | [051](day-051-amm-constant-product/) | — | — |
 
 ## Progress
 
@@ -120,3 +120,4 @@ day-XXX-topic/
 - Day 048: [Tool-Using LLM Agent](day-048-tool-using-llm-agent/) - ReAct agent framework with tool registry, schema validation, action parsing, multi-step reasoning loop, execution tracing, and simulated LLM decision-making
 - Day 049: [Fine-Tuning Sentiment Classifier](day-049-finetune-sentiment/) - Transfer learning with pre-trained embeddings, attention pooling, analytical backpropagation, discriminative learning rates, and gradient clipping for stable fine-tuning
 - Day 050: [Multi-Agent Conversation System](day-050-multi-agent-conversation/) - Multi-agent orchestration with role specialization, round-robin/coordinator/broadcast topologies, shared message history, consensus and keyword termination, and code review pipeline demo
+- Day 051: [Automated Market Maker — Constant Product](day-051-amm-constant-product/) - AMM with x*y=k invariant, LP token minting/burning, fee-driven k growth, price impact analysis, impermanent loss derivation, and arbitrage simulation

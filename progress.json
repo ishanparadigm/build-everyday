@@ -527,6 +527,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 51,
+      "track": "crypto",
+      "challenge": "Automated Market Maker (Constant Product)",
+      "folder": "day-051-amm-constant-product",
+      "date": "2026-05-30",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
