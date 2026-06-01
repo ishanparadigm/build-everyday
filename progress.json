@@ -538,6 +538,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 54,
+      "track": "ai",
+      "challenge": "Structured output extraction",
+      "folder": "day-054-structured-output-extraction",
+      "date": "2026-06-01",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
