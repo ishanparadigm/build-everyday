@@ -571,6 +571,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 57,
+      "track": "ai",
+      "challenge": "Reinforcement learning - Q-learning",
+      "folder": "day-057-reinforcement-q-learning",
+      "date": "2026-06-01",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

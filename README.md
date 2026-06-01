@@ -48,7 +48,7 @@ day-XXX-topic/
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `████████████░░░░░░░░ 16/24`  
+**AI         ** `████████████░░░░░░░░ 17/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
 **Robotics   ** `████████████░░░░░░░░ 15/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
@@ -70,6 +70,7 @@ day-XXX-topic/
 | 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) [045](day-045-kalman-filter/) | [046](day-046-rag-pipeline/) | — | — | — |
 | 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | [051](day-051-amm-constant-product/) | — | — |
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
+| 9 | [057](day-057-reinforcement-q-learning/) | — | — | — | — | — | — |
 
 ## Progress
 
@@ -125,3 +126,4 @@ day-XXX-topic/
 - Day 054: [Structured Output Extraction](day-054-structured-output-extraction/) - Schema-guided extraction with error-tolerant JSON parsing, recursive type validation, confidence scoring, retry logic with error feedback, and graceful degradation for sparse text
 - Day 055: [Image Classifier with CNN](day-055-cnn-image-classifier/) - CNN from scratch with NumPy: 2D convolution, ReLU, max pooling, softmax cross-entropy, full backpropagation through all layers, He initialization, and SGD training on synthetic digit data
 - Day 056: [Object Detection Basics](day-056-object-detection/) - Single-shot detector pipeline with IoU computation, multi-scale anchor generation, offset encoding/decoding, greedy NMS, anchor-to-GT matching, and end-to-end simulated detection with quality evaluation
+- Day 057: [Reinforcement Learning — Q-Learning](day-057-reinforcement-q-learning/) - Tabular Q-learning with Bellman updates, ε-greedy exploration with decay, grid world MDP environment, policy extraction and visualization, and hyperparameter sensitivity analysis
