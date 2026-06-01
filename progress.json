@@ -549,6 +549,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 55,
+      "track": "ai",
+      "challenge": "Image classifier with CNN",
+      "folder": "day-055-cnn-image-classifier",
+      "date": "2026-06-01",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
