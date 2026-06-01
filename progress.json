@@ -582,6 +582,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 58,
+      "track": "ai",
+      "challenge": "Policy gradient methods",
+      "folder": "day-058-policy-gradient",
+      "date": "2026-06-01",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
