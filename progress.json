@@ -560,6 +560,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 56,
+      "track": "ai",
+      "challenge": "Object detection basics",
+      "folder": "day-056-object-detection",
+      "date": "2026-06-01",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-51-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--01-lightgrey)
+![Days](https://img.shields.io/badge/days-52-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--01-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -48,7 +48,7 @@ day-XXX-topic/
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `████████████░░░░░░░░ 15/24`  
+**AI         ** `████████████░░░░░░░░ 16/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
 **Robotics   ** `████████████░░░░░░░░ 15/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
@@ -69,7 +69,7 @@ day-XXX-topic/
 | 5 | [033](day-033-prompt-chaining/) | [036](day-036-hardhat-testing/) [037](day-037-dex-swap-contract/) [038](day-038-staking-contract/) [039](day-039-multisig-wallet/) | [034](day-034-rrt-path-planning/) | — | [040](day-040-flash-loan-basics/) | — | [032](day-032-oracle-ml-contract/) |
 | 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) [045](day-045-kalman-filter/) | [046](day-046-rag-pipeline/) | — | — | — |
 | 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | [051](day-051-amm-constant-product/) | — | — |
-| 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) | — | — | — | — | — | — |
+| 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
 
 ## Progress
 
@@ -124,3 +124,4 @@ day-XXX-topic/
 - Day 051: [Automated Market Maker — Constant Product](day-051-amm-constant-product/) - AMM with x*y=k invariant, LP token minting/burning, fee-driven k growth, price impact analysis, impermanent loss derivation, and arbitrage simulation
 - Day 054: [Structured Output Extraction](day-054-structured-output-extraction/) - Schema-guided extraction with error-tolerant JSON parsing, recursive type validation, confidence scoring, retry logic with error feedback, and graceful degradation for sparse text
 - Day 055: [Image Classifier with CNN](day-055-cnn-image-classifier/) - CNN from scratch with NumPy: 2D convolution, ReLU, max pooling, softmax cross-entropy, full backpropagation through all layers, He initialization, and SGD training on synthetic digit data
+- Day 056: [Object Detection Basics](day-056-object-detection/) - Single-shot detector pipeline with IoU computation, multi-scale anchor generation, offset encoding/decoding, greedy NMS, anchor-to-GT matching, and end-to-end simulated detection with quality evaluation
