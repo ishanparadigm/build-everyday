@@ -593,6 +593,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 59,
+      "track": "ai",
+      "challenge": "Transformer attention from scratch",
+      "folder": "day-059-transformer-attention",
+      "date": "2026-06-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

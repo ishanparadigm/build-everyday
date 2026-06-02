@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-54-blue) ![Streak](https://img.shields.io/badge/streak-1_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--01-lightgrey)
+![Days](https://img.shields.io/badge/days-55-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--02-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 1 days | Longest: 5 days
+### 🔥 Current Streak: 2 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `███████████████░░░░░ 18/24`  
+**AI         ** `████████████████░░░░ 19/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
 **Robotics   ** `████████████░░░░░░░░ 15/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 33,383 lines across 54 solutions
+**Total LOC**: 33,383 lines across 55 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -70,7 +70,7 @@ day-XXX-topic/
 | 6 | — | — | [041](day-041-maze-solver/) [042](day-042-robot-arm-trajectory/) [043](day-043-swarm-behavior/) [044](day-044-slam-concept/) [045](day-045-kalman-filter/) | [046](day-046-rag-pipeline/) | — | — | — |
 | 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | [051](day-051-amm-constant-product/) | — | — |
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
-| 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) | — | — | — | — | — | — |
+| 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) | — | — | — | — | — | — |
 
 ## Progress
 
@@ -128,3 +128,4 @@ day-XXX-topic/
 - Day 056: [Object Detection Basics](day-056-object-detection/) - Single-shot detector pipeline with IoU computation, multi-scale anchor generation, offset encoding/decoding, greedy NMS, anchor-to-GT matching, and end-to-end simulated detection with quality evaluation
 - Day 057: [Reinforcement Learning — Q-Learning](day-057-reinforcement-q-learning/) - Tabular Q-learning with Bellman updates, ε-greedy exploration with decay, grid world MDP environment, policy extraction and visualization, and hyperparameter sensitivity analysis
 - Day 058: [Policy Gradient Methods — REINFORCE](day-058-policy-gradient/) - REINFORCE algorithm from scratch with NumPy neural network policy, manual backpropagation through softmax, return-to-go computation, variance reduction via return normalization, and CartPole environment with full physics simulation
+- Day 059: [Transformer Attention from Scratch](day-059-transformer-attention/) - Scaled dot-product and multi-head attention with NumPy, layer normalization, position-wise FFN, sinusoidal positional encoding, causal masking, and full encoder block assembly with residual connections
