@@ -626,6 +626,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 62,
+      "track": "ai",
+      "challenge": "Multi-modal model integration",
+      "folder": "day-062-multimodal-integration",
+      "date": "2026-06-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
