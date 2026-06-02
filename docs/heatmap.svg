@@ -69,6 +69,7 @@
 <rect x="168" y="113" width="14" height="14" rx="3" fill="#E8873D"/>
 <rect x="168" y="130" width="14" height="14" rx="3" fill="#2D2D2D"/>
 <rect x="185" y="28" width="14" height="14" rx="3" fill="#4A90D9"/>
+<rect x="185" y="45" width="14" height="14" rx="3" fill="#4A90D9"/>
 <text x="32" y="161" fill="#8B949E" font-family="monospace" font-size="10">Tracks:</text>
 <rect x="84" y="151" width="14" height="14" rx="3" fill="#4A90D9"/>
 <text x="102" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Ai</text>
