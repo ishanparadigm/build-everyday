@@ -615,6 +615,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 61,
+      "track": "ai",
+      "challenge": "Speech-to-text pipeline",
+      "folder": "day-061-speech-to-text",
+      "date": "2026-06-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
