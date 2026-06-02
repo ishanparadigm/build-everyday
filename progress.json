@@ -604,6 +604,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 60,
+      "track": "ai",
+      "challenge": "Image generation with diffusion",
+      "folder": "day-060-diffusion-image-gen",
+      "date": "2026-06-02",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
