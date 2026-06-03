@@ -637,6 +637,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 63,
+      "track": "robotics",
+      "challenge": "Sensor fusion (IMU + GPS)",
+      "folder": "day-063-sensor-fusion",
+      "date": "2026-06-03",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
