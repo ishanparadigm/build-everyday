@@ -648,6 +648,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 64,
+      "track": "ai",
+      "challenge": "GAN (Generative Adversarial Network) from scratch",
+      "folder": "day-064-gan-from-scratch",
+      "date": "2026-06-04",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
