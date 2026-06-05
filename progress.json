@@ -659,6 +659,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 65,
+      "track": "ai",
+      "challenge": "Variational Autoencoder (VAE) from scratch",
+      "folder": "day-065-variational-autoencoder",
+      "date": "2026-06-05",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
