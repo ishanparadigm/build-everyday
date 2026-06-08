@@ -670,6 +670,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 68,
+      "track": "ai",
+      "challenge": "Graph Neural Network from scratch",
+      "folder": "day-068-graph-neural-network",
+      "date": "2026-06-08",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

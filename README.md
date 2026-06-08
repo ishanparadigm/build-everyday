@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-61-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--06-lightgrey)
+![Days](https://img.shields.io/badge/days-62-blue) ![Streak](https://img.shields.io/badge/streak-1_day-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--08-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -48,12 +48,12 @@ day-XXX-topic/
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `██████████████████░░ 22/24`  
+**AI         ** `███████████████████░ 23/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
 **Robotics   ** `█████████████░░░░░░░ 16/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 38,337 lines across 61 solutions
+**Total LOC**: 38,337 lines across 62 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -71,6 +71,7 @@ day-XXX-topic/
 | 7 | — | — | — | [047](day-047-embeddings-vector-search/) [048](day-048-tool-using-llm-agent/) [049](day-049-finetune-sentiment/) [050](day-050-multi-agent-conversation/) | [051](day-051-amm-constant-product/) | — | — |
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
+| 10 | [068](day-068-graph-neural-network/) | — | — | — | — | — | — |
 
 ## Progress
 
@@ -135,3 +136,4 @@ day-XXX-topic/
 - Day 063: [Sensor Fusion — IMU + GPS](day-063-sensor-fusion/) - Kalman filter fusing high-rate IMU acceleration with low-rate GPS position, dead reckoning drift demonstration, covariance-based trust balancing, and 92% error reduction over IMU-only navigation
 - Day 064: [GAN from Scratch](day-064-gan-from-scratch/) - Generative Adversarial Network with NumPy: generator/discriminator MLPs, manual backpropagation, non-saturating loss, BCE training on mixture of Gaussians, mode coverage tracking, and sliced Wasserstein evaluation
 - Day 065: [Variational Autoencoder (VAE) from Scratch](day-065-variational-autoencoder/) - VAE with NumPy: encoder/decoder MLPs, reparameterization trick, ELBO loss (MSE + KL divergence), full backpropagation through sampling, KL annealing, latent space interpolation, and generation from prior
+- Day 068: [Graph Neural Network from Scratch](day-068-graph-neural-network/) - GCN with NumPy: symmetric adjacency normalization, message passing, manual backpropagation through graph convolutions, Adam optimizer, semi-supervised node classification, graph structure vs baseline comparison, and over-smoothing demonstration
