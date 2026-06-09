@@ -681,6 +681,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 69,
+      "track": "ai",
+      "challenge": "Mixture of Experts (MoE) from scratch",
+      "folder": "day-069-mixture-of-experts",
+      "date": "2026-06-09",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
