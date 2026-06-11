@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-64-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--10-lightgrey)
+![Days](https://img.shields.io/badge/days-65-blue) ![Streak](https://img.shields.io/badge/streak-4_days-orange) ![Longest](https://img.shields.io/badge/longest-5_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--11-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 3 days | Longest: 5 days
+### 🔥 Current Streak: 4 days | Longest: 5 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `██████████████████░░ 22/24`  
 **Crypto     ** `██████████░░░░░░░░░░ 12/24`  
-**Robotics   ** `██████████████░░░░░░ 17/24`  
+**Robotics   ** `███████████████░░░░░ 18/24`  
 **Integration** `████████░░░░░░░░░░░░ 5/12`  
 
-**Total LOC**: 40,695 lines across 64 solutions
+**Total LOC**: 41,355 lines across 65 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -72,6 +72,7 @@ day-XXX-topic/
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
 | 10 | [068](day-068-graph-neural-network/) [069](day-069-mixture-of-experts/) | — | [070](day-070-drone-path-planning/) | — | — | — | — |
+| 11 | — | — | [071](day-071-rl-robot-control/) | — | — | — | — |
 
 ## Progress
 
@@ -139,3 +140,4 @@ day-XXX-topic/
 - Day 068: [Graph Neural Network from Scratch](day-068-graph-neural-network/) - GCN with NumPy: symmetric adjacency normalization, message passing, manual backpropagation through graph convolutions, Adam optimizer, semi-supervised node classification, graph structure vs baseline comparison, and over-smoothing demonstration
 - Day 069: [Mixture of Experts (MoE) from Scratch](day-069-mixture-of-experts/) - MoE with NumPy: top-K gating network with noisy routing, expert MLP specialization, auxiliary load balancing loss to prevent collapse, multi-region classification, expert utilization tracking, and MoE vs dense capacity comparison
 - Day 070: [Autonomous Drone Path Planning](day-070-drone-path-planning/) - 3D RRT* path planner with energy-aware cost function (asymmetric climb/descent), box and cylinder obstacle avoidance, no-fly zones, near-neighbor rewiring for asymptotic optimality, path smoothing via random shortcutting, and wind-adjusted energy analysis
+- Day 071: [RL for Robot Control](day-071-rl-robot-control/) - DQN agent controlling a 2-link planar arm with from-scratch neural network, experience replay, target network stabilization, shaped reward engineering, ε-greedy exploration decay, and Q-value policy analysis

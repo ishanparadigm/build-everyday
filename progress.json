@@ -703,6 +703,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 71,
+      "track": "robotics",
+      "challenge": "Reinforcement learning for robot control",
+      "folder": "day-071-rl-robot-control",
+      "date": "2026-06-11",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
