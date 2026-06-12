@@ -714,6 +714,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 72,
+      "track": "crypto",
+      "challenge": "On-chain data analysis with Python",
+      "folder": "day-072-onchain-data-analysis",
+      "date": "2026-06-12",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
