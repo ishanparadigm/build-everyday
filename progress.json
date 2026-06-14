@@ -725,6 +725,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 73,
+      "track": "crypto",
+      "challenge": "MEV detection script",
+      "folder": "day-073-mev-detection",
+      "date": "2026-06-13",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
