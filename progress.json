@@ -736,6 +736,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 74,
+      "track": "robotics",
+      "challenge": "ROS2 basic node",
+      "folder": "day-074-ros2-basic-node",
+      "date": "2026-06-14",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
