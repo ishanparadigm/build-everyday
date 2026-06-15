@@ -51,9 +51,9 @@ day-XXX-topic/
 **AI         ** `██████████████████░░ 22/24`  
 **Crypto     ** `████████████░░░░░░░░ 14/24`  
 **Robotics   ** `████████████████░░░░ 19/24`  
-**Integration** `████████░░░░░░░░░░░░ 6/12`  
+**Integration** `██████████░░░░░░░░░░ 6/12`  
 
-**Total LOC**: 45,197 lines across 69 solutions
+**Total LOC**: 45,507 lines across 69 solutions
 <!-- PROGRESS_BARS:END -->
 
 
