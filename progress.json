@@ -747,6 +747,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 75,
+      "track": "integration",
+      "challenge": "Full autonomous trading agent",
+      "folder": "day-075-autonomous-trading-agent",
+      "date": "2026-06-15",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
