@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-69-blue) ![Streak](https://img.shields.io/badge/streak-8_days-orange) ![Longest](https://img.shields.io/badge/longest-8_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--15-lightgrey)
+![Days](https://img.shields.io/badge/days-70-blue) ![Streak](https://img.shields.io/badge/streak-9_days-orange) ![Longest](https://img.shields.io/badge/longest-9_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--16-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 8 days | Longest: 8 days
+### 🔥 Current Streak: 9 days | Longest: 9 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
-**AI         ** `██████████████████░░ 22/24`  
+**AI         ** `██████████████████░░ 23/24`  
 **Crypto     ** `████████████░░░░░░░░ 14/24`  
 **Robotics   ** `████████████████░░░░ 19/24`  
 **Integration** `██████████░░░░░░░░░░ 6/12`  
 
-**Total LOC**: 45,507 lines across 69 solutions
+**Total LOC**: 45,507 lines across 70 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -72,7 +72,7 @@ day-XXX-topic/
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
 | 10 | [068](day-068-graph-neural-network/) [069](day-069-mixture-of-experts/) | — | [070](day-070-drone-path-planning/) | — | — | — | — |
-| 11 | — | — | [071](day-071-rl-robot-control/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
+| 11 | [076](day-076-bpe-tokenizer/) | — | [071](day-071-rl-robot-control/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
 
 ## Progress
 
@@ -145,3 +145,4 @@ day-XXX-topic/
 - Day 073: [MEV Detection Script](day-073-mev-detection/) - MEV detection engine with sandwich attack pattern matching, circular arbitrage path tracing, liquidation bonus computation, gas price premium analysis, and simulated block data with embedded MEV patterns
 - Day 074: [ROS2 Basic Node](day-074-ros2-basic-node/) - Pure Python ROS2 simulation with nodes, typed pub/sub topics, QoS profiles (reliability/durability compatibility), services for request/reply, timer-driven executor event loop, and multi-node reactive robot demo
 - Day 075: [Full Autonomous Trading Agent](day-075-autonomous-trading-agent/) - Q-learning agent with neural network Q-function, on-chain signal generation, Kelly criterion position sizing, hard-constraint risk management (drawdown/daily loss/cooldown), event-driven execution with slippage, and multi-strategy comparison
+- Day 076: [BPE Tokenizer from Scratch](day-076-bpe-tokenizer/) - Byte-Pair Encoding tokenizer with corpus training, greedy pair merging, ordered merge-based encoding, lossless decoding, compression ratio analysis, and vocabulary size vs sequence length tradeoffs

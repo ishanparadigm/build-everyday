@@ -758,6 +758,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 76,
+      "track": "ai",
+      "challenge": "BPE Tokenizer from scratch",
+      "folder": "day-076-bpe-tokenizer",
+      "date": "2026-06-16",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
