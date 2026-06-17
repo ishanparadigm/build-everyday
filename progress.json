@@ -769,6 +769,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 77,
+      "track": "crypto",
+      "challenge": "Uniswap V3 pool analytics",
+      "folder": "day-077-uniswap-v3-analytics",
+      "date": "2026-06-17",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
