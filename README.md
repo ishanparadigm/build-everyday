@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-71-blue) ![Streak](https://img.shields.io/badge/streak-10_days-orange) ![Longest](https://img.shields.io/badge/longest-10_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--17-lightgrey)
+![Days](https://img.shields.io/badge/days-72-blue) ![Streak](https://img.shields.io/badge/streak-11_days-orange) ![Longest](https://img.shields.io/badge/longest-11_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--18-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 10 days | Longest: 10 days
+### 🔥 Current Streak: 11 days | Longest: 11 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `██████████████████░░ 22/24`  
 **Crypto     ** `████████████░░░░░░░░ 15/24`  
-**Robotics   ** `████████████████░░░░ 19/24`  
+**Robotics   ** `████████████████░░░░ 20/24`  
 **Integration** `██████████░░░░░░░░░░ 6/12`  
 
-**Total LOC**: 46,839 lines across 71 solutions
+**Total LOC**: 47,539 lines across 72 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -72,7 +72,7 @@ day-XXX-topic/
 | 8 | [054](day-054-structured-output-extraction/) [055](day-055-cnn-image-classifier/) [056](day-056-object-detection/) | — | — | — | — | — | — |
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
 | 10 | [068](day-068-graph-neural-network/) [069](day-069-mixture-of-experts/) | — | [070](day-070-drone-path-planning/) | — | — | — | — |
-| 11 | [076](day-076-bpe-tokenizer/) | [077](day-077-uniswap-v3-analytics/) | [071](day-071-rl-robot-control/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
+| 11 | [076](day-076-bpe-tokenizer/) | [077](day-077-uniswap-v3-analytics/) | [071](day-071-rl-robot-control/) [078](day-078-multi-robot-coordination/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
 
 ## Progress
 
@@ -147,3 +147,4 @@ day-XXX-topic/
 - Day 075: [Full Autonomous Trading Agent](day-075-autonomous-trading-agent/) - Q-learning agent with neural network Q-function, on-chain signal generation, Kelly criterion position sizing, hard-constraint risk management (drawdown/daily loss/cooldown), event-driven execution with slippage, and multi-strategy comparison
 - Day 076: [BPE Tokenizer from Scratch](day-076-bpe-tokenizer/) - Byte-Pair Encoding tokenizer with corpus training, greedy pair merging, ordered merge-based encoding, lossless decoding, compression ratio analysis, and vocabulary size vs sequence length tradeoffs
 - Day 077: [Uniswap V3 Pool Analytics](day-077-uniswap-v3-analytics/) - V3 concentrated liquidity engine with tick math, √P swap simulation, tick-crossing liquidity transitions, LP position valuation, fee growth accounting, impermanent loss analysis, and capital efficiency comparison
+- Day 078: [Multi-Robot Coordination](day-078-multi-robot-coordination/) - Hungarian algorithm for optimal task assignment, auction-based decentralized allocation, potential field formation control, velocity obstacle collision avoidance, and full multi-robot simulation with dynamic reallocation

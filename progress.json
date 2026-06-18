@@ -780,6 +780,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 78,
+      "track": "robotics",
+      "challenge": "Multi-robot coordination",
+      "folder": "day-078-multi-robot-coordination",
+      "date": "2026-06-18",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
