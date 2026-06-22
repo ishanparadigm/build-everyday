@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-72-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-11_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--21-lightgrey)
+![Days](https://img.shields.io/badge/days-73-blue) ![Streak](https://img.shields.io/badge/streak-0_days-orange) ![Longest](https://img.shields.io/badge/longest-11_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--22-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -51,9 +51,9 @@ day-XXX-topic/
 **AI         ** `██████████████████░░ 22/24`  
 **Crypto     ** `████████████░░░░░░░░ 15/24`  
 **Robotics   ** `█████████████████░░░ 20/24`  
-**Integration** `██████████░░░░░░░░░░ 6/12`  
+**Integration** `███████████░░░░░░░░░ 7/12`  
 
-**Total LOC**: 47,752 lines across 72 solutions
+**Total LOC**: 48,352 lines across 73 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -73,6 +73,7 @@ day-XXX-topic/
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
 | 10 | [068](day-068-graph-neural-network/) [069](day-069-mixture-of-experts/) | — | [070](day-070-drone-path-planning/) | — | — | — | — |
 | 11 | [076](day-076-bpe-tokenizer/) | [077](day-077-uniswap-v3-analytics/) | [071](day-071-rl-robot-control/) [078](day-078-multi-robot-coordination/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
+| 12 | — | — | — | — | — | — | [082](day-082-decentralized-robot-marketplace/) |
 
 ## Progress
 
@@ -148,3 +149,4 @@ day-XXX-topic/
 - Day 076: [BPE Tokenizer from Scratch](day-076-bpe-tokenizer/) - Byte-Pair Encoding tokenizer with corpus training, greedy pair merging, ordered merge-based encoding, lossless decoding, compression ratio analysis, and vocabulary size vs sequence length tradeoffs
 - Day 077: [Uniswap V3 Pool Analytics](day-077-uniswap-v3-analytics/) - V3 concentrated liquidity engine with tick math, √P swap simulation, tick-crossing liquidity transitions, LP position valuation, fee growth accounting, impermanent loss analysis, and capital efficiency comparison
 - Day 078: [Multi-Robot Coordination](day-078-multi-robot-coordination/) - Hungarian algorithm for optimal task assignment, auction-based decentralized allocation, potential field formation control, velocity obstacle collision avoidance, and full multi-robot simulation with dynamic reallocation
+- Day 082: [Decentralized Robot Task Marketplace](day-082-decentralized-robot-marketplace/) - Vickrey auction task allocation with simulated blockchain, robot cost estimation from physical constraints, smart contract lifecycle state machine, reputation system, and centralized vs decentralized efficiency comparison

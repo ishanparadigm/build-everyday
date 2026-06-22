@@ -791,6 +791,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 82,
+      "track": "integration",
+      "challenge": "Decentralized robot task marketplace",
+      "folder": "day-082-decentralized-robot-marketplace",
+      "date": "2026-06-22",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
