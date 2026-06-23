@@ -802,6 +802,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 83,
+      "track": "crypto",
+      "challenge": "Zero-knowledge proof intro",
+      "folder": "day-083-zero-knowledge-proofs",
+      "date": "2026-06-23",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
