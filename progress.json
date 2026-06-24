@@ -813,6 +813,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 84,
+      "track": "robotics",
+      "challenge": "Model Predictive Control (MPC)",
+      "folder": "day-084-model-predictive-control",
+      "date": "2026-06-24",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }

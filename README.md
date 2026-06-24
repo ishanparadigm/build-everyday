@@ -1,7 +1,7 @@
 # build-everyday
 
 <!-- BADGES:START -->
-![Days](https://img.shields.io/badge/days-74-blue) ![Streak](https://img.shields.io/badge/streak-2_days-orange) ![Longest](https://img.shields.io/badge/longest-11_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--23-lightgrey)
+![Days](https://img.shields.io/badge/days-75-blue) ![Streak](https://img.shields.io/badge/streak-3_days-orange) ![Longest](https://img.shields.io/badge/longest-11_days-green) ![Updated](https://img.shields.io/badge/last_updated-2026--06--24-lightgrey)
 <!-- BADGES:END -->
 
 Daily coding across AI, crypto, and robotics. One commit a day, every day.
@@ -44,16 +44,16 @@ day-XXX-topic/
 <!-- HEATMAP:END -->
 
 <!-- STREAK:START -->
-### 🔥 Current Streak: 2 days | Longest: 11 days
+### 🔥 Current Streak: 3 days | Longest: 11 days
 <!-- STREAK:END -->
 
 <!-- PROGRESS_BARS:START -->
 **AI         ** `██████████████████░░ 22/24`  
 **Crypto     ** `████████████░░░░░░░░ 15/24`  
-**Robotics   ** `█████████████████░░░ 20/24`  
+**Robotics   ** `█████████████████░░░ 21/24`  
 **Integration** `████████████░░░░░░░░ 7/12`  
 
-**Total LOC**: 49,628 lines across 74 solutions
+**Total LOC**: 50,228 lines across 75 solutions
 <!-- PROGRESS_BARS:END -->
 
 
@@ -73,7 +73,7 @@ day-XXX-topic/
 | 9 | [057](day-057-reinforcement-q-learning/) [058](day-058-policy-gradient/) [059](day-059-transformer-attention/) [060](day-060-diffusion-image-gen/) [061](day-061-speech-to-text/) [062](day-062-multimodal-integration/) | — | [063](day-063-sensor-fusion/) | [064](day-064-gan-from-scratch/) [065](day-065-variational-autoencoder/) | — | — | — |
 | 10 | [068](day-068-graph-neural-network/) [069](day-069-mixture-of-experts/) | — | [070](day-070-drone-path-planning/) | — | — | — | — |
 | 11 | [076](day-076-bpe-tokenizer/) | [077](day-077-uniswap-v3-analytics/) | [071](day-071-rl-robot-control/) [078](day-078-multi-robot-coordination/) | — | [072](day-072-onchain-data-analysis/) [073](day-073-mev-detection/) | [074](day-074-ros2-basic-node/) | [075](day-075-autonomous-trading-agent/) |
-| 12 | — | [083](day-083-zero-knowledge-proofs/) | — | — | — | — | [082](day-082-decentralized-robot-marketplace/) |
+| 12 | — | [083](day-083-zero-knowledge-proofs/) | [084](day-084-model-predictive-control/) | — | — | — | [082](day-082-decentralized-robot-marketplace/) |
 
 ## Progress
 
@@ -151,3 +151,4 @@ day-XXX-topic/
 - Day 078: [Multi-Robot Coordination](day-078-multi-robot-coordination/) - Hungarian algorithm for optimal task assignment, auction-based decentralized allocation, potential field formation control, velocity obstacle collision avoidance, and full multi-robot simulation with dynamic reallocation
 - Day 082: [Decentralized Robot Task Marketplace](day-082-decentralized-robot-marketplace/) - Vickrey auction task allocation with simulated blockchain, robot cost estimation from physical constraints, smart contract lifecycle state machine, reputation system, and centralized vs decentralized efficiency comparison
 - Day 083: [Zero-Knowledge Proofs from First Principles](day-083-zero-knowledge-proofs/) - Schnorr interactive/non-interactive ZK proofs, Fiat-Shamir heuristic, OR-composition for witness hiding, R1CS arithmetic circuit verification, and range proofs with bit commitments
+- Day 084: [Model Predictive Control (MPC)](day-084-model-predictive-control/) - Bicycle kinematic model, receding horizon optimization with L-BFGS-B, multi-objective cost function with tracking/smoothness tradeoffs, warm-start from shifted solutions, constraint handling, and closed-loop figure-8 trajectory tracking with 0.5m mean error
