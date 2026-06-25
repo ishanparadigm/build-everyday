@@ -824,6 +824,17 @@
       "my_time_seconds": null,
       "my_completed_date": null,
       "revealed": false
+    },
+    {
+      "day": 85,
+      "track": "robotics",
+      "challenge": "Occupancy Grid Mapping",
+      "folder": "day-085-occupancy-grid-mapping",
+      "date": "2026-06-25",
+      "my_completed": false,
+      "my_time_seconds": null,
+      "my_completed_date": null,
+      "revealed": false
     }
   ]
 }
