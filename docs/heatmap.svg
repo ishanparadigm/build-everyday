@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="273" height="197" viewBox="0 0 273 197">
-<rect width="273" height="197" fill="#161B22" rx="6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="290" height="197" viewBox="0 0 290 197">
+<rect width="290" height="197" fill="#161B22" rx="6"/>
 <text x="2" y="40" fill="#8B949E" font-family="monospace" font-size="10">Mon</text>
 <text x="2" y="74" fill="#8B949E" font-family="monospace" font-size="10">Wed</text>
 <text x="2" y="108" fill="#8B949E" font-family="monospace" font-size="10">Fri</text>
@@ -96,6 +96,7 @@
 <rect x="236" y="96" width="14" height="14" rx="3" fill="#2D2D2D"/>
 <rect x="236" y="113" width="14" height="14" rx="3" fill="#2D2D2D"/>
 <rect x="236" y="130" width="14" height="14" rx="3" fill="#2D2D2D"/>
+<rect x="253" y="28" width="14" height="14" rx="3" fill="#2D2D2D"/>
 <text x="32" y="161" fill="#8B949E" font-family="monospace" font-size="10">Tracks:</text>
 <rect x="84" y="151" width="14" height="14" rx="3" fill="#4A90D9"/>
 <text x="102" y="161" fill="#C9D1D9" font-family="monospace" font-size="10">Ai</text>
